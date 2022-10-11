@@ -1,0 +1,46 @@
+@use "../../../../../common/variable" as v;
+
+section.statistics {
+  // opacity: 5%;
+  background-color: v.$secund_words_color;
+  div.statistics-box {
+    background-color: v.$sec-back-sections;
+    div.container {
+      text-align: center;
+      div.text-box {
+        margin-top: 78px;
+        h2.sec-header {
+          color: v.$main-section-color;
+          font-size: 45px;
+        }
+
+        p.statistics-description {
+          color: v.$sections_paragraph_color;
+          max-width: 610px;
+          margin: 11px auto 0;
+          font-size: 17px;
+        }
+      }
+
+      div.units-box {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 70px;
+        div.state-item {
+          margin-top: 82px;
+          p.number {
+            color: v.$main_words_color;
+            font-weight: bold;
+            font-size: 43px;
+          }
+
+          span.num-description {
+            color: v.$main-section-color;
+            font-size: 18px;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}

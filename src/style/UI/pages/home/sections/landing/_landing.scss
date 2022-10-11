@@ -1,0 +1,67 @@
+@use "../../../../../common/variable" as v;
+@use "../../../../../common/mixin" as m;
+
+section.landing {
+  background-color: v.$main-section-color;
+  div.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 117px 0 0 0;
+    margin-bottom: 90px;
+    div.content-box {
+      h1.main-header {
+        color: v.$secund_words_color;
+        font-size: 53px;
+        word-spacing: 2px;
+        margin: 0 {
+          top: 4px;
+        }
+        span.odd-word {
+          color: v.$main_words_color;
+        }
+      }
+
+      p.landing-description {
+        margin-top: 8px;
+        max-width: 452px;
+        color: v.$landing_paragraph_color;
+        font-size: 18px;
+        word-spacing: 3px;
+      }
+
+      div.button-group-landing {
+        display: flex;
+        margin-top: 25px;
+        gap:30px;
+        button.get-started {
+          @include m.coButton(16px, 15px, 26px);
+          word-spacing: 2px;
+        }
+        button.landing-sign-up {
+          color: v.$secund_words_color;
+          background-color: transparent;
+          border: 1px solid v.$border-button-transparent;
+          padding: 15px 28px;
+          font-size: 16px;
+          letter-spacing: 1px;
+          border-radius: 5px;
+          outline: none;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+        }
+      }
+    }
+
+    div.banner-box {
+      width: 516px;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: 5px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

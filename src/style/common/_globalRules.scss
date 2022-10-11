@@ -1,5 +1,4 @@
-$container-left-m:150px;
-$container-right-m:85px;
+@use "./variable" as v;
 
 * {
   -webkit-box-sizing: border-box;
@@ -19,9 +18,8 @@ body {
 }
 
 .container {
-  padding: 0 15px;
-  margin: 0 $container-right-m 0 $container-left-m;
-  width: calc(100% - $container-right-m - $container-left-m);
+  margin: 0 v.$container-right-m 0 v.$container-left-m;
+  width: calc(100% - v.$container-right-m - v.$container-left-m);
   /* small */
   @media (min-width: 768px) {
     // width: 750px;

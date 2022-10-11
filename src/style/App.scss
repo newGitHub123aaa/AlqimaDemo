@@ -16,16 +16,20 @@
 // footer
 @use "./UI/footer/footer";
 
+.App {
+  background-color: transparent;
+}
 .for-test {
   display: none;
   width: 100vw -1;
-  filter: opacity(20%);
+  // filter: opacity(20%);
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-filter: opacity(20%);
+  -webkit-filter: opacity(35%);
   img {
     display: block;
     width: 100%;
   }
+  z-index: -1;
 }

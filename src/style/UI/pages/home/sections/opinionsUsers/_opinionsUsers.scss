@@ -1,0 +1,71 @@
+@use "../../../../../common/variable" as v;
+
+section.opinions-users {
+  // opacity: 5%;
+  background-color: v.$secund_words_color;
+  .container {
+    text-align: center;
+    div.opinions-users-top {
+      h2.opinions-users-header {
+        color: v.$main-section-color;
+      }
+
+      p.opinions-users-paragraph {
+        color: v.$landing_paragraph_color;
+      }
+    }
+
+    div.opinions-persons-box {
+      height: 22px;
+      div.person-ballets {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        span {
+          display: block;
+          width: 20px;
+          height: 20px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          &.active {
+            background-color: v.$main_words_color;
+          }
+          &:not(.active) {
+            background-color: #eef0f3;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.person-item {
+  div.opinions-users-quote {
+    p.quote-paragraph {
+      color: v.$main-section-color;
+    }
+  }
+
+  div.opinions-users-person {
+    div.person-img {
+    }
+
+    div.person-name {
+      color: v.$main-section-color;
+    }
+
+    div.person-career {
+      color: v.$landing_paragraph_color;
+    }
+  }
+}
+
+// replace them when them created
+.person2,
+.person3 {
+  display: none;
+}

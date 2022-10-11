@@ -1,9 +1,16 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
-function Subscribe() {
+function Subscribe({subscribe}) {
   return (
-    <div>Subscribe</div>
+    <div></div>
   )
 }
 
-export default Subscribe
+const mapStateToProps = (state) => {
+  return {
+    subscribe: state.dataText.dataJson.home.subscribe,
+  };
+};
+
+export default connect(mapStateToProps)(Subscribe);

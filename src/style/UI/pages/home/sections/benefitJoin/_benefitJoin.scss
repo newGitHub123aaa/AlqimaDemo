@@ -1,0 +1,74 @@
+@use "../../../../../common/variable" as v;
+
+section.benefit-join {
+  // opacity: 10%;
+  background-color: v.$sec-back-sections;
+  text-align: center;
+  margin-top: 135px;
+  div.container {
+    padding-top: 77px;
+    padding-bottom: 30px;
+    div.top-box {
+      h2.benefit-header {
+        font-size: 31px;
+        font-weight: 700;
+        color: v.$main-section-color;
+      }
+
+      p.benefit-paragraph {
+        color: v.$sections_paragraph_color;
+        font-size: 20px;
+        margin-top: 6px;
+      }
+    }
+
+    div.bottom-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin-top: 20px;
+      div.bottom-left-box,
+      div.bottom-right-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 45px;
+      }
+      div.bottom-center-box {
+        margin-top: 69px;
+        div.hand-img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 335px;
+          padding-bottom: 66px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.benefit-item {
+  div.item-top-img {
+    img {
+      width: 62px;
+    }
+  }
+
+  h4.item-header {
+    color: v.$benefit-item-header-color;
+    font-size: 22px;
+    margin-top: 12px;
+  }
+
+  p.item-paragraph {
+    color: v.$benefit-item-paragraph-color;
+    max-width: 285px;
+    margin: 9px auto 0;
+  }
+}

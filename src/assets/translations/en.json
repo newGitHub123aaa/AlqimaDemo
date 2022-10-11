@@ -10,7 +10,132 @@
       "signUp": "Sign Up"
     }
   },
-  "home": {},
+  "home": {
+    "landing": {
+      "mainHeader": {
+        "oddWord": "ALQIMA",
+        "restHeader": "is the largest educational platform"
+      },
+      "description": "We're different. Alqima is the only educational platform that lets you learn everything on one platform.",
+      "buttonGroup": {
+        "getStarted": "Get Started",
+        "signUp": "Sign Up"
+      },
+      "bannerImgAlt": "landing img contains work's team"
+    },
+    "statistics": {
+      "textBox": {
+        "secHeader": "We believe in the power of numbers",
+        "statisticsDescription": "Alqima is the only educational platform that lets you learn everything on one platform."
+      },
+      "unitsBox": {
+        "stateItems": [
+          {
+            "id": "state1",
+            "num": "200,000",
+            "numDescription": "Active Students"
+          },
+          { "id": "state2", "num": "500", "numDescription": "Teacher" },
+          { "id": "state3", "num": "+50.000", "numDescription": "Course" },
+          { "id": "state4", "num": "1000", "numDescription": "Live Events" }
+        ]
+      }
+    },
+    "ourTeam": {
+      "contentBox": {
+        "textBox": {
+          "teamHeader": "Meet our team",
+          "teamParagraph": "Highly professional teachers will help you to learn easily & quickly."
+        },
+        "teamButton": "Join Us Now"
+      },
+      "cardsBox": {
+        "cardsBoxItems": [
+          {
+            "id": "team1",
+            "headerCard": "Macauley Herring",
+            "paragraphCard": "Senior English Teacher"
+          },
+          {
+            "id": "team2",
+            "headerCard": "Ivan Mathews",
+            "paragraphCard": "Senior English Teacher"
+          },
+          {
+            "id": "team3",
+            "headerCard": "Elen Benitez",
+            "paragraphCard": "Senior Chemistry Teacher"
+          },
+          {
+            "id": "team4",
+            "headerCard": "Macauley Herring",
+            "paragraphCard": "Senior Arabic Teacher"
+          },
+          {
+            "id": "team5",
+            "headerCard": "Alya Levine",
+            "paragraphCard": "Senior Maths Teacher"
+          },
+          {
+            "id": "team6",
+            "headerCard": "Rosemary Hernandez",
+            "paragraphCard": "Senior Physics Teacher"
+          }
+        ]
+      }
+    },
+    "benefitJoin": {
+      "benefitHeader": "You will benefit greatly from joining us",
+      "benefitParagraph": "With our integrated system, you can manage every aspect of your life in one platform.",
+      "benefitItems": [
+        {
+          "id": "benefitItems1",
+          "itemHeader": "Measure your performance",
+          "itemParagraph": "you con toke free quizzes o that You will be able to know your level"
+        },
+        {
+          "id": "benefitItems2",
+          "itemHeader": "study easily",
+          "itemParagraph": "You will be able o study easily & quickly with help of our team."
+        },
+        {
+          "id": "benefitItems3",
+          "itemHeader": "improve communication skills",
+          "itemParagraph": "We work together in groups which will make it easier for you to mingle with us."
+        },
+        {
+          "id": "benefitItems4",
+          "itemHeader": "know your strength",
+          "itemParagraph": "our system will help you to know Your strength & weakness points."
+        }
+      ],
+      "benefitImgAlt": "benefit img"
+    },
+    "opinionsUsers": {
+      "opinionsUsersHeader": "Testimonial from Algima users",
+      "opinionsUsersParagraph": "some of opinions from our users & students.",
+      "opinionsPersons": [
+        {
+          "id": "person1",
+          "quoteParagraph": "the best solution for anyone who wants to work a flexible schedule but still earn full-time income.",
+          "personName": "Mohamed Ahmed",
+          "personCareer": "Teacher"
+        },
+        {
+          "id": "person2",
+          "quoteParagraph": "",
+          "personName": "",
+          "personCareer": ""
+        },
+        {
+          "id": "person3",
+          "quoteParagraph": "",
+          "personName": "",
+          "personCareer": ""
+        }
+      ]
+    }
+  },
   "about": {},
   "login": {},
   "notFound": {},
