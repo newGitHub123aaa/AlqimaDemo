@@ -1,0 +1,12 @@
+// sections
+@use "./sections/benefitJoin/benefitJoin";
+@use "./sections/landing/landing";
+@use "./sections/opinionsUsers/opinionsUsers";
+@use "./sections/ourTeam/ourTeam";
+@use "./sections/statistics/statistics";
+@use "./sections/subscribe/subscribe";
+
+
+.home .container{
+  background-color: red;
+}

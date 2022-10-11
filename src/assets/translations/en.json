@@ -1,0 +1,20 @@
+{
+  "navLink": {
+    "lang": "ar",
+    "logoBox": {
+      "logoSpan": "ALQIMA"
+    },
+    "navList": ["Home", "Teachers", "Subjects", "About"],
+    "sign": {
+      "login": "Log In",
+      "signUp": "Sign Up"
+    }
+  },
+  "home": {},
+  "about": {},
+  "login": {},
+  "notFound": {},
+  "signup": {},
+  "subjects": {},
+  "teachers": {}
+}

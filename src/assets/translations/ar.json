@@ -1,0 +1,20 @@
+{
+  "navLink": {
+    "lang": "سوف",
+    "logoBox": {
+      "logoSpan": "القمة"
+    },
+    "navList": ["وطن", "مدرسون", "المواضيع", "عن"],
+    "sign": {
+      "login": "تسجيل الدخول",
+      "signUp": "التسجيل"
+    }
+  },
+  "home": {},
+  "about": {},
+  "login": {},
+  "notFound": {},
+  "signup": {},
+  "subjects": {},
+  "teachers": {}
+}
