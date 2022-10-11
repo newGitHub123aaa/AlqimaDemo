@@ -1,1 +1,1 @@
-export const DATA = 'DATA';
+export const CHANGE_DATA = 'CHANGE_DATA';

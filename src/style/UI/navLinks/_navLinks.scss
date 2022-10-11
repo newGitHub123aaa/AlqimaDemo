@@ -12,6 +12,7 @@ nav.nav-links {
     padding-right: 0;
     button.change-lang {
       display: none;
+      z-index: 20;
     }
 
     div.logo-box {

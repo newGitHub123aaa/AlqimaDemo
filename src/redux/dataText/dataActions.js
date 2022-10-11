@@ -1,8 +1,8 @@
-import { DATA } from './dataTypes';
+import { CHANGE_DATA } from './dataTypes';
 
-export const data = (lang = 'en') => {
+export const changeData = (lang = 'en') => {
   return {
-    type: DATA,
+    type: CHANGE_DATA,
     preload: lang,
   };
 };

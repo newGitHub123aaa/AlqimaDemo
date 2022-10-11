@@ -1,6 +1,6 @@
 import React from "react";
 import CoButton from "./../../../../../common/CoButton";
-
+import landingImg from "../../../../../../assets/images/landing.png";
 function Landing() {
   return (
     <section className="Landing">
@@ -8,7 +8,7 @@ function Landing() {
         <div className="content-box">
           <h1 className="main-header"></h1>
           <p className="landing-description">
-            <span></span>
+            <span className="odd-word"></span>
           </p>
           <div className="button-group">
             <CoButton
@@ -20,7 +20,7 @@ function Landing() {
           </div>
         </div>
         <div className="banner-box">
-          <img src="" alt=""/>
+          <img src={landingImg} alt="" />
         </div>
       </div>
     </section>

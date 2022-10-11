@@ -1,4 +1,4 @@
-import { DATA } from "./dataTypes";
+import { CHANGE_DATA } from "./dataTypes";
 import enData from "../../assets/translations/en.json";
 import ArData from "../../assets/translations/ar.json";
 
@@ -13,7 +13,7 @@ const dataReducer = (state = initialState, action) => {
       ? ArData
       : enData;
   switch (action.type) {
-    case DATA:
+    case CHANGE_DATA:
       return {
         ...state,
         dataJson: dataText,

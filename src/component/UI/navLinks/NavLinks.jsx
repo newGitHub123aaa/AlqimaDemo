@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { changeLang } from "../../../redux";
+import { changeData, changeLang } from "../../../redux";
 import logoImg from "../../../assets/images/logo/logo1.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import CoButton from "./../../common/CoButton";
 
-function NavLinks({ lang, dir, changeLang, navLink }) {
+function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
   const navigate = useNavigate();
   // methods
   const handleBtnLang = () => {
@@ -13,6 +13,7 @@ function NavLinks({ lang, dir, changeLang, navLink }) {
     const direction = dir === "ltr" ? "rtl" : "ltr";
     changeLang(language, direction);
     handleLang(language, direction);
+    changeData(language);
   };
   const handleLang = (language, direction) => {
     if (language === "en" && direction === "ltr") {
@@ -65,7 +66,11 @@ function NavLinks({ lang, dir, changeLang, navLink }) {
             >
               {navLink.sign.login}
             </button>
-            <CoButton className={"sign-up"} goto={loginPaths[1]} contentText={navLink.sign.signUp}/>
+            <CoButton
+              className={"sign-up"}
+              goto={loginPaths[1]}
+              contentText={navLink.sign.signUp}
+            />
           </div>
         </div>
       </nav>
@@ -85,6 +90,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     changeLang: (language, direction) =>
       dispatch(changeLang(language, direction)),
+    changeData: (language) =>
+      dispatch(changeData(language)),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(NavLinks);
