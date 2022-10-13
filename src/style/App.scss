@@ -8,10 +8,10 @@
 // pages
 @use "./UI/pages/home/home";
 @use "./UI/pages/about/about";
-@use "./UI/pages/login/login";
+@use "./UI/pages/loginAndSignUp/loginAndSignUp";
 @use "./UI/pages/notfound/notFound";
-@use "./UI/pages/signup/signUp";
-@use "./UI/pages/subjects/subjects";
+@use "./UI/pages/courses/courses";
+@use "./UI/pages/courses/units/coursesItem"; // units of this page
 @use "./UI/pages/teachers/teachers";
 // footer
 @use "./UI/footer/footer";
@@ -21,12 +21,14 @@
 }
 .for-test {
   display: none;
+  margin-top: 90px;
   width: 100vw -1;
   // filter: opacity(20%);
+  // -webkit-filter: opacity(35%);
+
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-filter: opacity(35%);
   img {
     display: block;
     width: 100%;

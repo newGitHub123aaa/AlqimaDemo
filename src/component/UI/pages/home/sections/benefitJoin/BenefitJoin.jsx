@@ -8,25 +8,13 @@ import benefitImg2 from "../../../../../../assets/images/benefit2.svg";
 import benefitImg3 from "../../../../../../assets/images/benefit3.svg";
 import benefitImg4 from "../../../../../../assets/images/benefit4.svg";
 import benefitImg5 from "../../../../../../assets/images/benefit5.png";
+import WaveTop from "./../../../../../common/WaveTop";
+import WaveBottom from './../../../../../common/WaveBottom';
 
 function BenefitJoin({ benefitJoin }) {
   return (
     <section className="benefit-join">
-      <div
-        className="sections-wave-svg-top"
-        style={{ height: 150, overflow: "hidden", backgroundColor: "white" }}
-      >
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          style={{ height: "100%", width: "100%" }}
-        >
-          <path
-            d="M0.00,49.99 C250.93,10.10 343.44,211.08 504.68,52.09 L500.00,0.00 L0.00,0.00 Z"
-            style={{ stroke: "none", fill: "#f7f8f9" }}
-          />
-        </svg>
-      </div>
+      <WaveTop />
       <div className="container">
         <div className="top-box">
           <h2 className="benefit-header">{benefitJoin.benefitHeader}</h2>
@@ -64,21 +52,7 @@ function BenefitJoin({ benefitJoin }) {
           </div>
         </div>
       </div>
-      <div
-        className="sections-wave-svg-bottom"
-        style={{ height: 150, overflow: "hidden", backgroundColor: "#fff" }}
-      >
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          style={{ height: "100%", width: "100%" }}
-        >
-          <path
-            d="M0.00,49.99 C250.93,10.10 343.44,211.08 504.68,52.09 L500.00,0.00 L0.00,0.00 Z"
-            style={{ stroke: "none", fill: "#f7f8f9" }}
-          />
-        </svg>
-      </div>
+      <WaveBottom />
     </section>
   );
 }

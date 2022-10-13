@@ -5,7 +5,6 @@ import OurTeam from "./sections/ourTeam/OurTeam";
 import BenefitJoin from "./sections/benefitJoin/BenefitJoin";
 import OpinionsUsers from './sections/opinionsUsers/OpinionsUsers';
 import Subscribe from './sections/subscribe/Subscribe';
-import Footer from './../../footer/Footer';
 
 function Home() {
   return (
@@ -16,7 +15,6 @@ function Home() {
       <BenefitJoin />
       <OpinionsUsers />
       <Subscribe />
-      <Footer />
     </div>
   );
 }

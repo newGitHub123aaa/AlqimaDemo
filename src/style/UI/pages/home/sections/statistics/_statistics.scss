@@ -12,6 +12,9 @@ section.statistics {
         h2.sec-header {
           color: v.$main-section-color;
           font-size: 45px;
+          @media (max-width: 767.98px){
+          	font-size: 33px
+          }
         }
 
         p.statistics-description {
@@ -26,6 +29,9 @@ section.statistics {
         display: flex;
         justify-content: space-around;
         margin-bottom: 70px;
+        @media (max-width: 767.98px){
+        	flex-direction: column;
+        }
         div.state-item {
           margin-top: 82px;
           p.number {

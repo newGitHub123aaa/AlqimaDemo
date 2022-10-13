@@ -4,7 +4,7 @@
     "logoBox": {
       "logoSpan": "ALQIMA"
     },
-    "navList": ["Home", "Teachers", "Subjects", "About"],
+    "navList": ["Home", "Teachers", "courses", "About"],
     "sign": {
       "login": "Log In",
       "signUp": "Sign Up"
@@ -117,7 +117,7 @@
       "opinionsPersons": [
         {
           "id": "person1",
-          "quoteParagraph": "the best solution for anyone who wants to work a flexible schedule but still earn full-time income.",
+          "quoteParagraph": "The best solution for anyone who wants to work a flexible schedule but still earn full-time income.",
           "personName": "Mohamed Ahmed",
           "personCareer": "Teacher"
         },
@@ -134,12 +134,375 @@
           "personCareer": ""
         }
       ]
+    },
+    "subscribe": {
+      "subscribeHeader": "Be the first to know when we launch",
+      "subscribeParagraph": "Stay in the loop with everything you need to know.",
+      "subscribePlaceholder": "Enter your email",
+      "subscribeSpan": "l We care about your data in our",
+      "subscribeSpanOddWords": "privacy policy",
+      "subscribeBtn": "Subscribe"
+    },
+    "footer": {
+      "LinkHelp": "Help",
+      "LinkPrivacy": "Privacy",
+      "copyRight": "©2022alqima. All rights reserved."
+    }
+  },
+  "loginPage": {
+    "loginSignHeader": "Sign in to your account",
+    "loginSignParagraph": "start your learning journey.",
+    "loginEmailLabel": "Email",
+    "loginEmailPlaceholder": "pat@shuffle dev",
+    "loginPasswordLabel": "Password",
+    "loginPasswordPlaceholder": "********************",
+    "loginRememberMe": "Remember me",
+    "loginForgetPassword": "Forgot your password?",
+    "loginLoginBtn": "Sign In",
+    "loginBottomParagraph": "Don't have an account?",
+    "loginBottomSpan": "Sign up"
+  },
+  "signUpPage": {
+    "signupSignHeader": "Join our community",
+    "signupSignParagraph": "Start your journey with our platform.",
+    "signupNameLabel": "Name*",
+    "signupNamePlaceholder": "Patryk",
+    "signupEmailLabel": "Email*",
+    "signupEmailPlaceholder": "pat@shuffle.dev",
+    "signupPasswordLabel": "Password",
+    "signupPasswordPlaceholder": "********************",
+    "signupRememberMe": "Remember me",
+    "signupLoginBtn": "Sign Up",
+    "signupGoogleBtn": "sign in with Google",
+    "signupBottomParagraph": "Already have an account?",
+    "signupBottomSpan": "Sign In"
+  },
+  "coursesPage": {
+    "coursesHeader": "All Courses",
+    "selectedLabel": "Select your study year:",
+    "coursesOption": ["second year secondary", "second year secondary", "second year secondary"],
+    "headerFilter": [
+      "All",
+      "Arabic",
+      "English",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Maths",
+      "History",
+      "French"
+    ],
+    "coursesNumberTitle": "Courses",
+    "sortedSelectedLabel": "Sorted By:",
+    "sortedCoursesOption": ["Top Rated", "Top Rated", "Top Rated"],
+    "coursesItems": {
+      "arabic": [
+        {
+          "id": "coursesArabicItem1",
+          "itemContentHeader": "Arabic",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesArabicItem2",
+          "itemContentHeader": "Arabic",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesArabicItem3",
+          "itemContentHeader": "Arabic",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ],
+      "english": [
+        {
+          "id": "coursesEnglishItem1",
+          "itemContentHeader": "English",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesEnglishItem2",
+          "itemContentHeader": "English",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesEnglishItem3",
+          "itemContentHeader": "English",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ],
+      "physics": [
+        {
+          "id": "coursesPhysicsItem1",
+          "itemContentHeader": "Physics",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesPhysicsItem2",
+          "itemContentHeader": "Physics",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesPhysicsItem3",
+          "itemContentHeader": "Physics",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ],
+      "chemistry": [
+        {
+          "id": "coursesChemistryItem1",
+          "itemContentHeader": "Chemistry",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesChemistryItem2",
+          "itemContentHeader": "Chemistry",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesChemistryItem3",
+          "itemContentHeader": "Chemistry",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ],
+      "biology": [
+        {
+          "id": "coursesBiologyItem1",
+          "itemContentHeader": "Biology",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesBiologyItem2",
+          "itemContentHeader": "Biology",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesBiologyItem3",
+          "itemContentHeader": "Biology",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ],
+      "maths": [
+        {
+          "id": "coursesMathsItem1",
+          "itemContentHeader": "Maths",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesMathsItem2",
+          "itemContentHeader": "Maths",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesMathsItem3",
+          "itemContentHeader": "Maths",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ],
+      "history": [
+        {
+          "id": "coursesHistoryItem1",
+          "itemContentHeader": "History",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesHistoryItem2",
+          "itemContentHeader": "History",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesHistoryItem3",
+          "itemContentHeader": "History",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ],
+      "french": [
+        {
+          "id": "coursesFrenchItem1",
+          "itemContentHeader": "French",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesFrenchItem2",
+          "itemContentHeader": "French",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        },
+        {
+          "id": "coursesFrenchItem3",
+          "itemContentHeader": "French",
+          "rateNum": "4.5",
+          "rateInfo": "(100)",
+          "contentParagraph": "The Best Way To Solve Your Problems",
+          "participant": "1K Participant",
+          "Hour": "15 Hour",
+          "lecture": "15 Lecture",
+          "personName": "Ghada Abdolnabi",
+          "bottomPrice": "1000 EGP"
+        }
+      ]
     }
   },
   "about": {},
-  "login": {},
   "notFound": {},
-  "signup": {},
-  "subjects": {},
   "teachers": {}
 }

@@ -1,0 +1,101 @@
+@use "../../../../../common/variable" as v;
+@use "../../../../../common/mixin" as m;
+
+section.subscribe {
+  // opacity: 20%;
+  background-color: v.$secund_words_color;
+  padding-bottom: 50px;
+  div.container {
+    div.subscribe-box {
+      background-color: v.$main-section-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 90px 0 110px;
+      margin-top: 30px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+      border-radius: 15px;
+      div.subscribe-top {
+        h2.subscribe-header {
+          color: v.$secund_words_color;
+          margin-top: 20px;
+          font-size: 33px;
+          @media (max-width: 767.98px) {
+            font-size: 20px;
+            text-align: center;
+            padding: 0 15px;
+            padding-bottom: 20px;
+          }
+        }
+
+        p.subscribe-paragraph {
+          color: v.$footer_color;
+          margin: auto;
+          text-align: center;
+          margin-top: 2px;
+          font-size: 19px;
+          @media (max-width: 767.98px) {
+            font-size: 14px;
+            padding: 0 15px;
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+      div.subscribe-form {
+        form {
+          display: flex;
+          justify-content: space-between;
+          gap: 24px;
+          align-items: start;
+          max-width: 435px;
+          margin-top: 19px;
+          @media (max-width: 767.98px) {
+            flex-direction: column;
+            text-align: center;
+            margin: auto;
+          }
+          div.input-box {
+            ::placeholder {
+              color: v.$placeholder;
+            }
+            input#email {
+              display: block;
+              width: 300px;
+              border: none;
+              border-radius: 8px;
+              outline: none;
+              padding: 12px;
+              -webkit-border-radius: 8px;
+              -moz-border-radius: 8px;
+              -ms-border-radius: 8px;
+              -o-border-radius: 8px;
+            }
+
+            span {
+              display: block;
+              color: v.$benefit-item-paragraph-color;
+              font-size: 11px;
+              margin-top: 9px;
+              span.odd-words {
+                display: inline;
+                color: v.$main_words_color;
+              }
+            }
+          }
+
+          button.subscribe-btn {
+            @include m.coButton(16px, 12px, 15px);
+            @media (max-width: 767.98px) {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

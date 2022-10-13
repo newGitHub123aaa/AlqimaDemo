@@ -1,0 +1,21 @@
+@use "../../../../../../common/variable" as v;
+
+div.benefit-item {
+  div.item-top-img {
+    img {
+      width: 62px;
+    }
+  }
+
+  h4.item-header {
+    color: v.$benefit-item-header-color;
+    font-size: 22px;
+    margin-top: 12px;
+  }
+
+  p.item-paragraph {
+    color: v.$benefit-item-paragraph-color;
+    max-width: 285px;
+    margin: 9px auto 0;
+  }
+}

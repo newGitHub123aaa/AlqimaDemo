@@ -28,6 +28,9 @@ section.benefit-join {
       align-items: center;
       gap: 50px;
       margin-top: 20px;
+      @media (max-width: 991.98px){
+      	flex-direction: column;
+      }
       div.bottom-left-box,
       div.bottom-right-box {
         display: flex;
@@ -35,6 +38,7 @@ section.benefit-join {
         align-items: center;
         flex-direction: column;
         gap: 45px;
+        width: 50%;
       }
       div.bottom-center-box {
         margin-top: 69px;
@@ -50,25 +54,5 @@ section.benefit-join {
         }
       }
     }
-  }
-}
-
-div.benefit-item {
-  div.item-top-img {
-    img {
-      width: 62px;
-    }
-  }
-
-  h4.item-header {
-    color: v.$benefit-item-header-color;
-    font-size: 22px;
-    margin-top: 12px;
-  }
-
-  p.item-paragraph {
-    color: v.$benefit-item-paragraph-color;
-    max-width: 285px;
-    margin: 9px auto 0;
   }
 }

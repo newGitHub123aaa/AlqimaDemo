@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { changeData, changeLang } from "../../../redux";
-import logoImg from "../../../assets/images/logo/logo1.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import CoButton from "./../../common/CoButton";
+// import logoImg
+import logoImg from "../../../assets/images/logo/logo1.png";
 
 function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
       document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");
     }
   };
-  const [pagesPaths] = useState(["home", "teachers", "subjects", "about"]);
+  const [pagesPaths] = useState(["home", "teachers", "courses/all", "about"]);
   const [loginPaths] = useState(["login", "signup"]);
 
   const handleSignGo = (path) => {
@@ -35,42 +36,49 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
     <>
       <nav className="nav-links">
         <div className="container">
-          <button className="change-lang" onClick={handleBtnLang}>
-            {navLink.lang}
-          </button>
-          <div className="logo-box">
-            <div className="logo-img">
-              <img src={logoImg} alt="" />
-            </div>
-            <span>{navLink.logoBox.logoSpan}</span>
-          </div>
-          <div className="list-box">
-            <ul className="list-ul">
-              {navLink.navList.map((el, inx) => (
-                <NavLink
-                  className="list-item"
-                  to={"/" + pagesPaths[inx]}
-                  key={inx + el}
-                >
-                  <li className="list-item" key={inx}>
-                    {el}
-                  </li>
-                </NavLink>
-              ))}
-            </ul>
-          </div>
-          <div className="sign-box">
-            <button
-              className="login"
-              onClick={() => handleSignGo(loginPaths[0])}
+          <div className="nav-box">
+            <div
+              className="logo-box clickable"
+              onClick={() => handleSignGo("home")}
             >
-              {navLink.sign.login}
-            </button>
-            <CoButton
-              className={"sign-up"}
-              goto={loginPaths[1]}
-              contentText={navLink.sign.signUp}
-            />
+              <div className="logo-img">
+                <img src={logoImg} alt="" />
+              </div>
+              <span className="span-logo span-logo-light">
+                {navLink.logoBox.logoSpan}
+              </span>
+            </div>
+            <div className="list-box">
+              <ul className="list-ul">
+                {navLink.navList.map((el, inx) => (
+                  <NavLink
+                    className="list-item"
+                    to={"/" + pagesPaths[inx]}
+                    key={inx + el}
+                  >
+                    <li className="list-item" key={inx}>
+                      {el}
+                    </li>
+                  </NavLink>
+                ))}
+                <button className="change-lang" onClick={handleBtnLang}>
+                  {navLink.lang}
+                </button>
+              </ul>
+            </div>
+            <div className="sign-box">
+              <button
+                className="login"
+                onClick={() => handleSignGo(loginPaths[0])}
+              >
+                {navLink.sign.login}
+              </button>
+              <CoButton
+                className={"sign-up"}
+                path={loginPaths[1]}
+                contentText={navLink.sign.signUp}
+              />
+            </div>
           </div>
         </div>
       </nav>
@@ -90,8 +98,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     changeLang: (language, direction) =>
       dispatch(changeLang(language, direction)),
-    changeData: (language) =>
-      dispatch(changeData(language)),
+    changeData: (language) => dispatch(changeData(language)),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(NavLinks);
