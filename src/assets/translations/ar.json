@@ -5,10 +5,7 @@
       "logoSpan": "القمة"
     },
     "navList": ["الصفحة الرئيسية", "معلمون", "الدورات", "حول"],
-    "sign": {
-      "login": "تسجيل الدخول",
-      "signUp": "اشتراك"
-    }
+    "downloadBtn": "تحميل التطبيق"
   },
   "home": {
     "landing": {
@@ -19,7 +16,7 @@
       "description": "نحن مختلفون. القمة هي المنصة التعليمية الوحيدة التي تتيح لك تعلم كل شيء على منصة واحدة.",
       "buttonGroup": {
         "getStarted": "ابدأ",
-        "signUp": "اشترك"
+        "SignUpNow": "سجل الأن"
       },
       "bannerImgAlt": "صورة هبوط يحتوي على فريق العمل"
     },
@@ -49,49 +46,6 @@
             "id": " state4",
             "num": "1000",
             "numDescription": "أحداث حية"
-          }
-        ]
-      }
-    },
-    "ourTeam": {
-      "contentBox": {
-        "textBox": {
-          "teamHeader": "تعرف على فريقنا",
-          "teamParagraph": "سيساعدك المعلمون المحترفون للغاية على التعلم بسهولة وبسرعة."
-        },
-        "teamButton": "انضم إلينا الآن"
-      },
-      "cardsBox": {
-        "cardsBoxItems": [
-          {
-            "id": "team1",
-            "headerCard": "ماكولي هيرينج",
-            "paragraphCard": "مدرس اللغة الإنجليزية الأول"
-          },
-          {
-            "id": "team2",
-            "headerCard": "إيفان ماثيوز",
-            "paragraphCard": "مدرس اللغة الإنجليزية الأول"
-          },
-          {
-            "id": "team3",
-            "headerCard": "إلين بينيتيز",
-            "paragraphCard": "سيساعدك المعلمون المحترفون للغاية على التعلم بسهولة وبسرعة"
-          },
-          {
-            "id": "team4",
-            "headerCard": "ماكولي هيرينج",
-            "paragraphCard": "سيساعدك المعلمون المحترفون للغاية على التعلم بسهولة وبسرعة"
-          },
-          {
-            "id": "team5",
-            "headerCard": "ماكولي هيرينج",
-            "paragraphCard": "سيساعدك المعلمون المحترفون للغاية على التعلم بسهولة وبسرعة"
-          },
-          {
-            "id": "team6",
-            "headerCard": "ماكولي هيرينج",
-            "paragraphCard": "سيساعدك المعلمون المحترفون للغاية على التعلم بسهولة وبسرعة"
           }
         ]
       }
@@ -146,14 +100,6 @@
           "personCareer": ""
         }
       ]
-    },
-    "subscribe": {
-      "subscribeHeader": "كن أول من يعرف متى نطلق",
-      "subscribeParagraph": "ابق على اطلاع بكل ما تريد معرفته.",
-      "subscribePlaceholder": "أدخل بريدك الإلكتروني",
-      "subscribeSpan": "l نحن نهتم ببياناتك في",
-      "subscribeSpanOddWords": "سياسة الخصوصية",
-      "subscribeBtn": "الاشتراك"
     },
     "footer": {
       "LinkHelp": "مساعدة",

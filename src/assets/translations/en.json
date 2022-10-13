@@ -5,10 +5,7 @@
       "logoSpan": "ALQIMA"
     },
     "navList": ["Home", "Teachers", "courses", "About"],
-    "sign": {
-      "login": "Log In",
-      "signUp": "Sign Up"
-    }
+    "downloadBtn": "Download App"
   },
   "home": {
     "landing": {
@@ -19,7 +16,7 @@
       "description": "We're different. Alqima is the only educational platform that lets you learn everything on one platform.",
       "buttonGroup": {
         "getStarted": "Get Started",
-        "signUp": "Sign Up"
+        "signUpNow": "Sign Up Now"
       },
       "bannerImgAlt": "landing img contains work's team"
     },
@@ -38,49 +35,6 @@
           { "id": "state2", "num": "500", "numDescription": "Teacher" },
           { "id": "state3", "num": "+50.000", "numDescription": "Course" },
           { "id": "state4", "num": "1000", "numDescription": "Live Events" }
-        ]
-      }
-    },
-    "ourTeam": {
-      "contentBox": {
-        "textBox": {
-          "teamHeader": "Meet our team",
-          "teamParagraph": "Highly professional teachers will help you to learn easily & quickly."
-        },
-        "teamButton": "Join Us Now"
-      },
-      "cardsBox": {
-        "cardsBoxItems": [
-          {
-            "id": "team1",
-            "headerCard": "Macauley Herring",
-            "paragraphCard": "Senior English Teacher"
-          },
-          {
-            "id": "team2",
-            "headerCard": "Ivan Mathews",
-            "paragraphCard": "Senior English Teacher"
-          },
-          {
-            "id": "team3",
-            "headerCard": "Elen Benitez",
-            "paragraphCard": "Senior Chemistry Teacher"
-          },
-          {
-            "id": "team4",
-            "headerCard": "Macauley Herring",
-            "paragraphCard": "Senior Arabic Teacher"
-          },
-          {
-            "id": "team5",
-            "headerCard": "Alya Levine",
-            "paragraphCard": "Senior Maths Teacher"
-          },
-          {
-            "id": "team6",
-            "headerCard": "Rosemary Hernandez",
-            "paragraphCard": "Senior Physics Teacher"
-          }
         ]
       }
     },
@@ -135,14 +89,6 @@
         }
       ]
     },
-    "subscribe": {
-      "subscribeHeader": "Be the first to know when we launch",
-      "subscribeParagraph": "Stay in the loop with everything you need to know.",
-      "subscribePlaceholder": "Enter your email",
-      "subscribeSpan": "l We care about your data in our",
-      "subscribeSpanOddWords": "privacy policy",
-      "subscribeBtn": "Subscribe"
-    },
     "footer": {
       "LinkHelp": "Help",
       "LinkPrivacy": "Privacy",
@@ -180,7 +126,11 @@
   "coursesPage": {
     "coursesHeader": "All Courses",
     "selectedLabel": "Select your study year:",
-    "coursesOption": ["second year secondary", "second year secondary", "second year secondary"],
+    "coursesOption": [
+      "second year secondary",
+      "second year secondary",
+      "second year secondary"
+    ],
     "headerFilter": [
       "All",
       "Arabic",

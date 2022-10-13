@@ -3,26 +3,55 @@
 footer.footer {
   // opacity: 20%;
   background-color: v.$sec-back-sections;
+  padding: 85px 0;
   div.container {
-    padding-bottom: 128px;
     div.footer-top {
       display: flex;
-      align-items: center;
-      margin-top: 88px;
-      @media (max-width: 991.98px){
-      	flex-direction: column;
+      flex-direction: column;
+      align-items: start;
+      @media (max-width: 991.98px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
       div.footer-top-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        @media (max-width: 991.98px){
+        	flex-direction: column;
+          align-items: center;
+        }
+        .get-app {
+          max-width: 480px;
+          display: flex;
+          flex-direction: column;
+          gap:20px;
+          @media (max-width: 991.98px){
+            flex-direction: row;
+          }
+          img {
+            display: block;
+            // width: 150px;
+            // height: 51px;
+          }
+        }
       }
 
       div.footer-top-right {
         flex-grow: 1;
-        text-align: center;
+        text-align: start;
+        @media (max-width: 767.98px){
+          align-self: flex-start;
+          width: 100%;
+        }
         div.list-box {
           display: flex;
           justify-content: center;
           align-items: center;
           flex-grow: 1;
+          width: 100%;
           ul.list-ul {
             display: flex;
             justify-content: center;
@@ -31,21 +60,22 @@ footer.footer {
             list-style: none;
             margin: 0;
             padding: 0;
-            @media (max-width: 767.98px){
-            	flex-direction:column;
+            color: #8082a3;
+            @media (max-width: 767.98px) {
+              width: 100%;
+              flex-direction: column;
+              flex-wrap: wrap;
+              height: 200px;
             }
             a.list-item {
               text-decoration: none;
-              color: v.$main-section-color;
+              color: v.$footer_links_color;
               font-size: 19px;
               -webkit-transition: color 0.6s;
               -moz-transition: color 0.6s;
               -ms-transition: color 0.6s;
               -o-transition: color 0.6s;
               transition: color 0.6s;
-              &.active {
-                color: v.$main-section-color;
-              }
             }
           }
         }
@@ -56,15 +86,15 @@ footer.footer {
       display: flex;
       justify-content: space-between;
       margin-top: 74px;
-      @media (max-width: 767.98px){
-      	flex-direction: column;
-        text-align:center;
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+        text-align: center;
       }
       div.footer-bottom-left {
         color: v.$footer_color;
         font-size: 16px;
-        @media (max-width: 767.98px){
-        	margin-bottom: 15px;
+        @media (max-width: 767.98px) {
+          margin-bottom: 15px;
         }
       }
 

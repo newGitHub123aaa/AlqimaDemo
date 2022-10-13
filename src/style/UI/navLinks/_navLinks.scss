@@ -78,8 +78,9 @@ nav.nav-links {
           background-color: transparent;
           color: v.$nav_paragraph_color;
         }
-        button.sign-up {
-          @include m.coButton(14px, 8px, 12px);
+        a.navDownloadApp {
+          @include m.coButton(14px, 7px, 15px);
+          text-decoration: none;
         }
       }
     }

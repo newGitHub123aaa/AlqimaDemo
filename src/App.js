@@ -8,7 +8,7 @@ import Footer from "./component/UI/footer/Footer";
 import "./style/App.scss";
 import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 // img of design for test
-import homeImg from "./assets/images/pages/Sign In.jpg";
+import homeImg from "./assets/images/testImage/final_home.png";
 
 function App() {
   return (

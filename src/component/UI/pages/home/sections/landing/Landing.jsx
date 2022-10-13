@@ -1,7 +1,13 @@
 import React from "react";
 import CoButton from "./../../../../../common/CoButton";
-import landingImg from "../../../../../../assets/images/landing.png";
 import { connect } from "react-redux";
+
+// import landing images
+import landingImg1 from "../../../../../../assets/images/HomelandingImages/landing1.png";
+import landingImg2 from "../../../../../../assets/images/HomelandingImages/landing2.png";
+import landingImg3 from "../../../../../../assets/images/HomelandingImages/landing3.png";
+import landingImg4 from "../../../../../../assets/images/HomelandingImages/landing4.png";
+
 function Landing({ landing }) {
   return (
     <section className="landing">
@@ -16,15 +22,39 @@ function Landing({ landing }) {
             <CoButton
               className={"get-started"}
               goto={"#"}
-              contentText={landing.buttonGroup.getStarted}
+              contentText={landing.buttonGroup.signUpNow}
             />
-            <button className="landing-sign-up">
-              {landing.buttonGroup.signUp}
-            </button>
           </div>
         </div>
         <div className="banner-box">
-          <img src={landingImg} alt={landing.bannerImgAlt} />
+          <div className="banner-item-container">
+            <div className="banner-item banner-item-hand-img-one">
+              <div className="hand-img">
+                <img src={landingImg1} alt={landing.bannerImgAlt} />
+              </div>
+            </div>
+          </div>
+          <div className="banner-item-container">
+            <div className="banner-item banner-item-hand-img-two">
+              <div className="hand-img">
+                <img src={landingImg2} alt={landing.bannerImgAlt} />
+              </div>
+            </div>
+          </div>
+          <div className="banner-item-container">
+            <div className="banner-item banner-item-hand-img-three">
+              <div className="hand-img">
+                <img src={landingImg3} alt={landing.bannerImgAlt} />
+              </div>
+            </div>
+          </div>
+          <div className="banner-item-container">
+            <div className="banner-item banner-item-hand-img-four">
+              <div className="hand-img">
+                <img src={landingImg4} alt={landing.bannerImgAlt} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -52,4 +82,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Landing);
-

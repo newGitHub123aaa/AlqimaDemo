@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 // import  images
 import logoImg from "../../../../assets/images/logo/logo2.png";
 import leftImg from "../../../../assets/images/leftSignPage.png";
-import googleLogo from "../../../../assets/images/GoogleLogo.webp";
+import googleLogo from "../../../../assets/icons/GoogleLogo.webp";
 function SignUp({ signUpPage }) {
   // state
   const [form, setForm] = useState({

@@ -15,6 +15,9 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  @at-root html[dir="rtl"] body {
+    font-family: "Tajawal", sans-serif;
+  }
 }
 
 .container {

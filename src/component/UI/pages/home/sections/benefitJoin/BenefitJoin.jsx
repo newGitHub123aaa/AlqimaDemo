@@ -3,10 +3,10 @@ import BenefitItem from "./units/BenefitItem";
 import { connect } from "react-redux";
 
 // import benefit imgs
-import benefitImg1 from "../../../../../../assets/images/benefit3.svg"; // replace by benefit1 when get it
-import benefitImg2 from "../../../../../../assets/images/benefit2.svg";
-import benefitImg3 from "../../../../../../assets/images/benefit3.svg";
-import benefitImg4 from "../../../../../../assets/images/benefit4.svg";
+import benefitImg1 from "../../../../../../assets/icons/benefit3.svg"; // replace by benefit1 when get it
+import benefitImg2 from "../../../../../../assets/icons/benefit2.svg";
+import benefitImg3 from "../../../../../../assets/icons/benefit3.svg";
+import benefitImg4 from "../../../../../../assets/icons/benefit4.svg";
 import benefitImg5 from "../../../../../../assets/images/benefit5.png";
 import WaveTop from "./../../../../../common/WaveTop";
 import WaveBottom from './../../../../../common/WaveBottom';

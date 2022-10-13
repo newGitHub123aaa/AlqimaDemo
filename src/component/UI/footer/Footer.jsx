@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 
 // import logoImg
 import logoImg from "../../../assets/images/logo/logo2.png";
-import WaveTop from "./../../common/WaveTop";
+import AppStoreImg from "../../../assets/icons/App Store.svg";
+import GooglePlayImg from "../../../assets/icons/Google Play.svg";
 
 function Footer({ footer, navLink }) {
   const [pagesPaths] = useState([
@@ -17,7 +18,6 @@ function Footer({ footer, navLink }) {
   ]);
   return (
     <footer className="footer">
-      <WaveTop />
       <div className="container">
         <div className="footer-top">
           <div className="footer-top-left">
@@ -28,6 +28,10 @@ function Footer({ footer, navLink }) {
               <span className="span-logo span-logo-dark">
                 {navLink.logoBox.logoSpan}
               </span>
+            </div>
+            <div className="get-app">
+              <img src={AppStoreImg} alt="App store img" />
+              <img src={GooglePlayImg} alt="Google play img" />
             </div>
           </div>
           <div className="footer-top-right">
@@ -53,9 +57,7 @@ function Footer({ footer, navLink }) {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-bottom-left">
-          {footer.copyRight}
-          </div>
+          <div className="footer-bottom-left">{footer.copyRight}</div>
           <div className="footer-bottom-right">
             <i className="fab fa-facebook-f"></i>
             <i className="fab fa-twitter"></i>

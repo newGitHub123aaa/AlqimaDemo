@@ -67,17 +67,9 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
               </ul>
             </div>
             <div className="sign-box">
-              <button
-                className="login"
-                onClick={() => handleSignGo(loginPaths[0])}
-              >
-                {navLink.sign.login}
-              </button>
-              <CoButton
-                className={"sign-up"}
-                path={loginPaths[1]}
-                contentText={navLink.sign.signUp}
-              />
+              <a className="navDownloadApp" href="#">
+                {navLink.downloadBtn}
+              </a>
             </div>
           </div>
         </div>
