@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { changeData, changeLang } from "../../../redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import CoButton from "./../../common/CoButton";
+// import CoButton from "./../../common/CoButton";
 // import logoImg
 import logoImg from "../../../assets/images/logo/logo1.png";
 
@@ -25,8 +25,8 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
       document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");
     }
   };
-  const [pagesPaths] = useState(["home", "teachers", "courses/all", "about"]);
-  const [loginPaths] = useState(["login", "signup"]);
+  const [pagesPaths] = useState(["home", "teachers/all", "courses/all", "contactus"]);
+  // const [loginPaths] = useState(["login", "signup"]);
 
   const handleSignGo = (path) => {
     navigate(`/${path}`);

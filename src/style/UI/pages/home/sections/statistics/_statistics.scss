@@ -3,6 +3,7 @@
 section.statistics {
   // opacity: 5%;
   background-color: v.$secund_words_color;
+  
   div.statistics-box {
     background-color: v.$sec-back-sections;
     div.container {
@@ -47,6 +48,17 @@ section.statistics {
           }
         }
       }
+    }
+  }
+  div.pattern-hand {
+    position: absolute;
+    top: 50%;
+    margin: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }

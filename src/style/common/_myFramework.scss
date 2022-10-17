@@ -1,5 +1,10 @@
 @use "./variable" as v;
 
+.wave-landing {
+  position: relative;
+  z-index: 1;
+}
+
 .sections-wave-svg-top {
   -webkit-transform: scale(-1, -1);
   -moz-transform: scale(-1, -1);
@@ -40,7 +45,6 @@ div.logo-box {
   }
 }
 
-
 button.change-lang {
   //display: none;
   -webkit-border-radius: 5px;
@@ -53,9 +57,13 @@ button.change-lang {
   color: v.$secund_words_color;
   padding: 3px;
   z-index: 20;
-
 }
 
 .clickable {
   cursor: pointer;
+}
+
+.pattern {
+  background-image: url("../../assets/pattern/Pattern1.svg");
+  box-shadow: 0 0 10px 15px v.$sec-back-sections inset;
 }

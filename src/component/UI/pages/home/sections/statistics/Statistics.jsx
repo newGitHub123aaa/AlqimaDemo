@@ -4,12 +4,13 @@ import StateItem from "./units/StateItem";
 import WaveBottom from "./../../../../../common/WaveBottom";
 import WaveTop from "./../../../../../common/WaveTop";
 
+// import pattern statistic image
 function Statistics({ statistics }) {
   return (
     <section className="statistics">
       <div className="statistics-box">
         <WaveTop />
-        <div className="container">
+        <div className="container pattern">
           <div className="text-box">
             <h2 className="sec-header">{statistics.textBox.secHeader}</h2>
             <p className="statistics-description">

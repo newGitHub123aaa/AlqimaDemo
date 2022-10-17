@@ -10,14 +10,14 @@ import GooglePlayImg from "../../../assets/icons/Google Play.svg";
 function Footer({ footer, navLink }) {
   const [pagesPaths] = useState([
     "home",
-    "teachers",
-    "subjects",
-    "about",
+    "teachers/all",
+    "courses/all",
+    "contactus",
     "help",
     "privacy",
   ]);
   return (
-    <footer className="footer">
+    <footer className="footer pattern">
       <div className="container">
         <div className="footer-top">
           <div className="footer-top-left">
@@ -30,8 +30,12 @@ function Footer({ footer, navLink }) {
               </span>
             </div>
             <div className="get-app">
-              <img src={AppStoreImg} alt="App store img" />
-              <img src={GooglePlayImg} alt="Google play img" />
+              <a href="#">
+                <img src={AppStoreImg} alt="App store img" />
+              </a>
+              <a href="#">
+                <img src={GooglePlayImg} alt="Google play img" />
+              </a>
             </div>
           </div>
           <div className="footer-top-right">
@@ -59,11 +63,21 @@ function Footer({ footer, navLink }) {
         <div className="footer-bottom">
           <div className="footer-bottom-left">{footer.copyRight}</div>
           <div className="footer-bottom-right">
-            <i className="fab fa-facebook-f"></i>
-            <i className="fab fa-twitter"></i>
-            <i className="fab fa-instagram"></i>
-            <i className="fab fa-github"></i>
-            <i className="fab fa-linkedin"></i>
+            <a href="#">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-linkedin"></i>
+            </a>
           </div>
         </div>
       </div>

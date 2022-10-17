@@ -1,3 +1,20 @@
 {
-  "commentTranslate.targetLanguage": "ar"
+  "commentTranslate.targetLanguage": "ar",
+  "commentTranslate.hover.enabled": true,
+  "spellright.language": [
+    "ar",
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "json"
+  ],
+  "cSpell.words": [
+    "Abdelfattah",
+    "contactus",
+    "Yasser"
+  ],
+  "liveServer.settings.port": 5501
 }

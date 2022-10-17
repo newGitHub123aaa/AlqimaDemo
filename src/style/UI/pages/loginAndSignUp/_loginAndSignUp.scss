@@ -102,6 +102,13 @@ section.login {
               span.bottom-span {
                 color: v.$main_words_color;
               }
+              button.button-go-login {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
+              }
+
             }
             div.text-remember {
               display: flex;
