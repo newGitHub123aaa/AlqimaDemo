@@ -4,6 +4,8 @@ footer.footer {
   // opacity: 20%;
   background-color: v.$sec-back-sections;
   padding: 85px 0;
+  position: relative;
+  z-index: 2;
   div.container {
     div.footer-top {
       display: flex;

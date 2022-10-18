@@ -3,13 +3,14 @@
 
 section.login {
   // opacity: 20%;
+  position: relative;
+  z-index: 1;
   div.sign {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 660px;
     max-height: 100vh;
-    margin-bottom: 80px;
     gap: 20px;
     @media (max-width: 991.98px){
     	flex-direction:column;
