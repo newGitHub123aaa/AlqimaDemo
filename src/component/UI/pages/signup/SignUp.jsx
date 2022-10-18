@@ -3,9 +3,9 @@ import AllSignUp from "./sections/AllSignUp";
 import { connect } from "react-redux";
 import DocumentMeta from "react-document-meta";
 
-function SignUp(meta) {
+function SignUp(metaSignUp) {
   return (
-    <DocumentMeta {...meta}>
+    <DocumentMeta {...metaSignUp}>
       <AllSignUp />
     </DocumentMeta>
   );
@@ -13,7 +13,7 @@ function SignUp(meta) {
 
 const mapStateToProps = (state) => {
   return {
-    meta: state.dataText.dataJson.coursesPage.meta,
+    metaSignUp: state.dataText.dataJson.coursesPage.meta,
   };
 };
 

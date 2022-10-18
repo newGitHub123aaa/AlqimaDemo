@@ -3,16 +3,16 @@ import DocumentMeta from "react-document-meta";
 import AllLogin from "./sections/AllLogin";
 import { connect } from "react-redux";
 
-function Login(meta) {
+function Login(metaLogin) {
   return (
-    <DocumentMeta {...meta}>
+    <DocumentMeta {...metaLogin}>
       <AllLogin />
     </DocumentMeta>
   );
 }
 const mapStateToProps = (state) => {
   return {
-    meta: state.dataText.dataJson.coursesPage.meta,
+    metaLogin: state.dataText.dataJson.coursesPage.meta,
   };
 };
 

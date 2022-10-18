@@ -4,8 +4,10 @@ import { connect } from "react-redux";
 // import  images
 import logoImg from "../../../../../assets/images/logo/logo2.png";
 import leftImg from "../../../../../assets/images/leftSignPage.png";
+import { useNavigate } from "react-router-dom";
 
 function AllLogin({ loginPage }) {
+  const navigate = useNavigate();
   // state
   const [form, setForm] = useState({
     email: "",
@@ -40,6 +42,9 @@ function AllLogin({ loginPage }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(e);
+  };
+  const handleGoSignUp = () => {
+    navigate(`/signup`);
   };
   return (
     <section className="login">
@@ -101,9 +106,11 @@ function AllLogin({ loginPage }) {
                 <button className="sign-btn">{loginPage.loginLoginBtn}</button>
                 <p className="bottom-paragraph">
                   {loginPage.loginBottomParagraph}&thinsp;
-                  <span className="bottom-span">
-                    {loginPage.loginBottomSpan}
-                  </span>
+                  <button className="button-go-login" onClick={handleGoSignUp}>
+                    <span className="bottom-span">
+                      {loginPage.loginBottomSpan}
+                    </span>
+                  </button>
                 </p>
               </form>
             </div>

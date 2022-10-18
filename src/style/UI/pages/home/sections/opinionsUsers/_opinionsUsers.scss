@@ -11,7 +11,7 @@ section.opinions-users {
       h2.opinions-users-header {
         color: v.$main-section-color;
         font-size: 46px;
-        @media (max-width: 767.98px){
+        @media (max-width: 767.98px) {
           font-size: 25px;
         }
       }
@@ -20,15 +20,30 @@ section.opinions-users {
         color: v.$landing_paragraph_color;
         margin-top: 5px;
         font-size: 18px;
-        @media (max-width: 767.98px){
+        @media (max-width: 767.98px) {
           font-size: 16px;
         }
       }
     }
 
     div.opinions-persons-box {
+      min-height: 645px;
+      position: relative;
       padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 767.98px) {
+        min-height: 600px;
+      }
+      @media (min-width: 767.98px) and (max-width: 991.98px) {
+        min-height: 608px;
+      }
+
       div.person-ballets {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,6 +59,7 @@ section.opinions-users {
           -ms-border-radius: 50%;
           -o-border-radius: 50%;
           border-radius: 50%;
+          transition: background-color 0.6s;
           &.active {
             background-color: v.$main_words_color;
           }
@@ -55,4 +71,3 @@ section.opinions-users {
     }
   }
 }
-

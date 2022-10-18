@@ -4,10 +4,10 @@ import AllCourses from "./sections/AllCourses/AllCourses";
 import DocumentMeta from "react-document-meta";
 import { connect } from 'react-redux';
 
-function Courses(meta) {
+function Courses(metaCourses) {
   return (
     <>
-      <DocumentMeta {...meta}>
+      <DocumentMeta {...metaCourses}>
         <CoursesLanding />
         <AllCourses />
       </DocumentMeta>
@@ -17,7 +17,7 @@ function Courses(meta) {
 
 const mapStateToProps = (state) => {
   return {
-    meta: state.dataText.dataJson.coursesPage.meta,
+    metaCourses: state.dataText.dataJson.coursesPage.meta,
   };
 };
 

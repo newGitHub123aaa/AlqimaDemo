@@ -8,9 +8,9 @@ import GetApp from "./sections/getApp/GetApp";
 import { connect } from "react-redux";
 import DocumentMeta from "react-document-meta";
 
-function Home(meta) {
+function Home(metaHome) {
   return (
-    <DocumentMeta {...meta}>
+    <DocumentMeta {...metaHome}>
       <div className="home">
         <Landing />
         <Statistics />
@@ -25,7 +25,7 @@ function Home(meta) {
 
 const mapStateToProps = (state) => {
   return {
-    meta: state.dataText.dataJson.home.meta,
+    metaHome: state.dataText.dataJson.home.meta,
   };
 };
 

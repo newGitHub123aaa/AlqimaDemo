@@ -4,10 +4,10 @@ import TeacherLanding from "./sections/teacherLanding/TeacherLanding";
 import { connect } from "react-redux";
 import DocumentMeta from "react-document-meta";
 
-function Teachers(meta) {
+function Teachers(metaTeachers) {
   return (
     <>
-      <DocumentMeta {...meta}>
+      <DocumentMeta {...metaTeachers}>
         <TeacherLanding />
         <AllTeachers />
       </DocumentMeta>
@@ -17,7 +17,7 @@ function Teachers(meta) {
 
 const mapStateToProps = (state) => {
   return {
-    meta: state.dataText.dataJson.coursesPage.meta,
+    metaTeachers: state.dataText.dataJson.coursesPage.meta,
   };
 };
 
