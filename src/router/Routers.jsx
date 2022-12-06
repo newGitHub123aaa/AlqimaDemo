@@ -63,15 +63,15 @@ const LazySignUp = lazy(() => {
   });
 });
 
-// const LazyNotFound = lazy(() => {
-//   return Promise.all([
-//     import("./../component/UI/pages/notFound/NotFound"),
-//     new Promise((resolve) => setTimeout(resolve, 0)),
-//   ]).then(([moduleExports]) => {
-//     document.body.style.overflow = "auto";
-//     return moduleExports;
-//   });
-// });
+const LazyNotFound = lazy(() => {
+  return Promise.all([
+    import("./../component/UI/pages/notFound/NotFound"),
+    new Promise((resolve) => setTimeout(resolve, 0)),
+  ]).then(([moduleExports]) => {
+    document.body.style.overflow = "auto";
+    return moduleExports;
+  });
+});
 
 function Router() {
   return (
@@ -133,14 +133,14 @@ function Router() {
           </Suspense>
         }
       />
-      {/* <Route
+      <Route
         path="*"
         element={
           <Suspense fallback={<TmPreload />}>
             <LazyNotFound />
           </Suspense>
         }
-      /> */}
+      />
     </Routes>
   );
 }
