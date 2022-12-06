@@ -2,25 +2,23 @@ import React from "react";
 import AllTeachers from "./sections/allTeachers/AllTeachers";
 import TeacherLanding from "./sections/teacherLanding/TeacherLanding";
 import { connect } from "react-redux";
-import DocumentMeta from "react-document-meta";
+import usePageMeta from "./../../../../hooks/usePageMeta";
 
 function Teachers({ metaTeachers }) {
-
+  usePageMeta(metaTeachers.title, metaTeachers.description);
   return (
     <>
-      <DocumentMeta {...metaTeachers}>
-        <div>
-          <TeacherLanding />
-          <AllTeachers />
-        </div>
-      </DocumentMeta>
+      <div>
+        <TeacherLanding />
+        <AllTeachers />
+      </div>
     </>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    metaTeachers: state.dataText.dataJson.coursesPage.meta,
+    metaTeachers: state.dataText.dataJson.teachersPage.meta,
   };
 };
 

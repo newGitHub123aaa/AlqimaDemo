@@ -1,19 +1,17 @@
 import React from "react";
 import CoursesLanding from "./sections/coursesLanding/CoursesLanding";
 import AllCourses from "./sections/AllCourses/AllCourses";
-import DocumentMeta from "react-document-meta";
 import { connect } from "react-redux";
+import usePageMeta from './../../../../hooks/usePageMeta';
 
 function Courses({ metaCourses }) {
-
+  usePageMeta(metaCourses.title, metaCourses.description);
   return (
     <>
-      <DocumentMeta {...metaCourses}>
-        <div>
-          <CoursesLanding />
-          <AllCourses />
-        </div>
-      </DocumentMeta>
+      <div>
+        <CoursesLanding />
+        <AllCourses />
+      </div>
     </>
   );
 }

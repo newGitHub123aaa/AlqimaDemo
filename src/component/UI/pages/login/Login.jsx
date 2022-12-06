@@ -1,15 +1,15 @@
 import React from "react";
-import DocumentMeta from "react-document-meta";
 import AllLogin from "./sections/AllLogin";
 import { connect } from "react-redux";
+import usePageMeta from './../../../../hooks/usePageMeta';
 
 function Login({ metaLogin }) {
+    usePageMeta(metaLogin.title, metaLogin.description);
+
   return (
-    <DocumentMeta {...metaLogin}>
       <div>
         <AllLogin />
       </div>
-    </DocumentMeta>
   );
 }
 const mapStateToProps = (state) => {

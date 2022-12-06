@@ -1,15 +1,15 @@
 import React from "react";
 import AllSignUp from "./sections/AllSignUp";
 import { connect } from "react-redux";
-import DocumentMeta from "react-document-meta";
+import usePageMeta from './../../../../hooks/usePageMeta';
 
 function SignUp({ metaSignUp }) {
+    usePageMeta(metaSignUp.title, metaSignUp.description);
+
   return (
-    <DocumentMeta {...metaSignUp}>
       <div >
         <AllSignUp />
       </div>
-    </DocumentMeta>
   );
 }
 
