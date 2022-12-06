@@ -25,7 +25,7 @@ const LazyTeachers = lazy(() => {
 });
 const LazyCourses = lazy(() => {
   return Promise.all([
-    import("../component/UI/pages/courses/Courses"),
+    import("./../component/UI/pages/courses/Courses"),
     new Promise((resolve) => setTimeout(resolve, 0)),
   ]).then(([moduleExports]) => {
     document.body.style.overflow = "auto";
@@ -64,7 +64,7 @@ const LazySignUp = lazy(() => {
 
 const LazyNotFound = lazy(() => {
   return Promise.all([
-    import("../component/UI/pages/notFound/NotFound"),
+    import("./../component/UI/pages/notFound/NotFound"),
     new Promise((resolve) => setTimeout(resolve, 0)),
   ]).then(([moduleExports]) => {
     document.body.style.overflow = "auto";
