@@ -1,20 +1,16 @@
-import React, { useState } from "react";
-import ItemContact from "./units/ItemContact";
-// import contact images
-import contactImg1 from "../../../../../../assets/icons/contactItem1.svg";
-import contactImg2 from "../../../../../../assets/icons/contactItem2.svg";
-import contactImg3 from "../../../../../../assets/icons/contactItem3.svg";
+import React from "react";
 import { connect } from "react-redux";
 
-function ContactItems({ contactItems }) {
-  const [contactItemImages] = useState([contactImg1, contactImg2, contactImg3]);
+import ItemContact from "./units/ItemContact";
+
+function ContactItems({ contactItems, contactUsImgs }) {
   return (
     <section className="contact-items">
       <div className="container">
         {contactItems.map((el, inx) => (
           <ItemContact
             key={inx + el.id}
-            image={contactItemImages[inx]}
+            image={contactUsImgs[`contactImg${inx + 1}`]}
             header={el.itemHeader}
             address={el.contactAddress}
           />
@@ -26,6 +22,7 @@ function ContactItems({ contactItems }) {
 const mapStateToProps = (state) => {
   return {
     contactItems: state.dataText.dataJson.contactsPage.contactItems,
+    contactUsImgs: state.allImages.pagesImgs.contactUsImgs
   };
 };
 

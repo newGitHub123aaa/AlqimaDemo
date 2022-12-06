@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { changeData, changeLang } from "../../../redux";
 import { NavLink, useNavigate } from "react-router-dom";
-// import CoButton from "./../../common/CoButton";
-// import logoImg
-import logoImg from "../../../assets/images/logo/logo1.png";
 
-function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
+import { changeData } from "../../../redux/features/dataText/dataTextSlice";
+import { changeLang } from "../../../redux/features/changLang/changLangSlice";
+// import CoButton from "./../../common/CoButton";
+
+function NavBar({
+  lang,
+  dir,
+  changeLang,
+  changeData,
+  navBar,
+  navBarImgs,
+  navbarPaths,
+}) {
   const navigate = useNavigate();
   // methods
   const handleBtnLang = () => {
@@ -15,6 +23,8 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
     changeLang(language, direction);
     handleLang(language, direction);
     changeData(language);
+    localStorage.setItem("language", language);
+    localStorage.setItem("direction", direction);
   };
   const handleLang = (language, direction) => {
     if (language === "en" && direction === "ltr") {
@@ -25,9 +35,15 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
       document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");
     }
   };
-  const [pagesPaths] = useState(["home", "teachers/all", "courses/all", "contactus"]);
-  // const [loginPaths] = useState(["login", "signup"]);
-
+  useEffect(() => {
+    const language = localStorage.getItem("language");
+    const direction = localStorage.getItem("direction");
+    if (language && direction) {
+      changeLang(language, direction);
+      handleLang(language, direction);
+      changeData(language);
+    }
+  }, []);
   const handleSignGo = (path) => {
     navigate(`/${path}`);
   };
@@ -42,18 +58,18 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
               onClick={() => handleSignGo("home")}
             >
               <div className="logo-img">
-                <img src={logoImg} alt="" />
+                <img src={navBarImgs.logoImg} alt="" />
               </div>
               <span className="span-logo span-logo-light">
-                {navLink.logoBox.logoSpan}
+                {navBar.logoBox.logoSpan}
               </span>
             </div>
             <div className="list-box">
               <ul className="list-ul">
-                {navLink.navList.map((el, inx) => (
+                {navBar.navList.map((el, inx) => (
                   <NavLink
                     className="list-item"
-                    to={"/" + pagesPaths[inx]}
+                    to={Object.values(navbarPaths)[inx]}
                     key={inx + el}
                   >
                     <li className="list-item" key={inx}>
@@ -62,13 +78,13 @@ function NavLinks({ lang, dir, changeLang, changeData, navLink }) {
                   </NavLink>
                 ))}
                 <button className="change-lang" onClick={handleBtnLang}>
-                  {navLink.lang}
+                  {navBar.lang}
                 </button>
               </ul>
             </div>
             <div className="sign-box">
               <a className="navDownloadApp" href="#">
-                {navLink.downloadBtn}
+                {navBar.downloadBtn}
               </a>
             </div>
           </div>
@@ -82,15 +98,17 @@ const mapStateToProps = (state) => {
   return {
     lang: state.langDir.lang,
     dir: state.langDir.dir,
-    navLink: state.dataText.dataJson.navLink,
+    navBar: state.dataText.dataJson.navBar,
+    navBarImgs: state.allImages.navBarImgs,
+    navbarPaths: state.allPaths.navbarPaths,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     changeLang: (language, direction) =>
-      dispatch(changeLang(language, direction)),
+      dispatch(changeLang({ payloadLang: language, payloadDir: direction })),
     changeData: (language) => dispatch(changeData(language)),
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(NavLinks);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

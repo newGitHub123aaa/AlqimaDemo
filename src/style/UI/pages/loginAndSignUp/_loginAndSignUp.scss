@@ -12,9 +12,9 @@ section.login {
     min-height: 660px;
     max-height: 100vh;
     gap: 20px;
-    @media (max-width: 991.98px){
-    	flex-direction:column;
-      max-height:none;
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      max-height: none;
     }
     div.sign-left-container {
       display: flex;
@@ -22,11 +22,11 @@ section.login {
       align-items: center;
       margin: auto;
       min-width: 560px;
-      @media (max-width: 991.98px){
-      	margin-top: 50px;
+      @media (max-width: 991.98px) {
+        margin-top: 50px;
         margin-bottom: 30px;
       }
-      @media (max-width: 767.98px){
+      @media (max-width: 767.98px) {
         min-width: 0;
       }
       div.sign-left {
@@ -99,9 +99,15 @@ section.login {
             div.text-remember,
             p.bottom-paragraph {
               font-size: 11px;
-              span.odd-words,
+              button.odd-words,
               span.bottom-span {
                 color: v.$main_words_color;
+              }
+              button.odd-words {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
               }
               button.button-go-login {
                 border: none;
@@ -109,7 +115,6 @@ section.login {
                 background-color: transparent;
                 cursor: pointer;
               }
-
             }
             div.text-remember {
               display: flex;
@@ -152,7 +157,7 @@ section.login {
     div.sign-right {
       width: 650px;
       height: 700px;
-      @media (max-width: 767.98px){
+      @media (max-width: 767.98px) {
         width: 100%;
         // height: 700px;
       }

@@ -4,12 +4,15 @@ import TeacherLanding from "./sections/teacherLanding/TeacherLanding";
 import { connect } from "react-redux";
 import DocumentMeta from "react-document-meta";
 
-function Teachers(metaTeachers) {
+function Teachers({ metaTeachers }) {
+
   return (
     <>
       <DocumentMeta {...metaTeachers}>
-        <TeacherLanding />
-        <AllTeachers />
+        <div>
+          <TeacherLanding />
+          <AllTeachers />
+        </div>
       </DocumentMeta>
     </>
   );

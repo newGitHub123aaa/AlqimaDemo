@@ -1,5 +1,5 @@
 {
-  "navLink": {
+  "navBar": {
     "lang": "ar",
     "logoBox": {
       "logoSpan": "ALQIMA"
@@ -135,7 +135,7 @@
     "footer": {
       "LinkHelp": "Help",
       "LinkPrivacy": "Privacy",
-      "copyRight": "©2022alqima. All rights reserved."
+      "copyRight": "alqima. All rights reserved."
     }
   },
   "loginPage": {
@@ -206,12 +206,29 @@
       "searchBtn": "Search"
     },
     "allCourses": {
-      "coursesHeader": "All Courses",
+      "header": "All Courses",
       "selectedLabel": "Select your study year:",
-      "coursesOptions": [
-        "second year secondary",
-        "second year secondary",
-        "second year secondary"
+      "options": [
+        {
+          "id": "teachersOption1",
+          "value": "All",
+          "text": "All"
+        },
+        {
+          "id": "teachersOption2",
+          "value": "firstGradeSecondary",
+          "text": "First grade secondary"
+        },
+        {
+          "id": "teachersOption3",
+          "value": "secondYearSecondary",
+          "text": "Second year secondary"
+        },
+        {
+          "id": "teachersOption4",
+          "value": "thirdGradeSecondary",
+          "text": "Third grade secondary"
+        }
       ],
       "headerFilter": [
         "All",
@@ -227,9 +244,26 @@
       "coursesNumberTitle": "Courses",
       "sortedSelectedLabel": "Sorted By:",
       "sortedCoursesOptions": [
-        "Top Rated",
-        "Top Rated",
-        "Top Rated"
+        {
+          "id": "sortedCoursesOptions1",
+          "value": "All",
+          "text": "All"
+        },
+        {
+          "id": "sortedCoursesOptions2",
+          "value": "5",
+          "text": "rate 5"
+        },
+        {
+          "id": "sortedCoursesOptions3",
+          "value": "4",
+          "text": "rate 4"
+        },
+        {
+          "id": "sortedCoursesOptions4",
+          "value": "3",
+          "text": "rate 3"
+        }
       ],
       "coursesItems": {
         "arabic": [
@@ -243,19 +277,21 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "firstGradeSecondary"
           },
           {
             "id": "coursesArabicItem2",
             "itemContentHeader": "Arabic",
-            "rateNum": "4.5",
+            "rateNum": "4",
             "rateInfo": "(100)",
             "contentParagraph": "The Best Way To Solve Your Problems",
             "participant": "1K Participant",
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesArabicItem3",
@@ -267,7 +303,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "thirdGradeSecondary"
           }
         ],
         "english": [
@@ -281,7 +318,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesEnglishItem2",
@@ -293,7 +331,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesEnglishItem3",
@@ -305,7 +344,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "physics": [
@@ -319,7 +359,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesPhysicsItem2",
@@ -331,7 +372,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesPhysicsItem3",
@@ -343,7 +385,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "chemistry": [
@@ -357,7 +400,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesChemistryItem2",
@@ -369,7 +413,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesChemistryItem3",
@@ -381,7 +426,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "biology": [
@@ -395,7 +441,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesBiologyItem2",
@@ -407,7 +454,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesBiologyItem3",
@@ -419,7 +467,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "maths": [
@@ -433,7 +482,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesMathsItem2",
@@ -445,7 +495,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesMathsItem3",
@@ -457,7 +508,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "history": [
@@ -471,7 +523,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesHistoryItem2",
@@ -483,7 +536,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesHistoryItem3",
@@ -495,7 +549,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "french": [
@@ -509,7 +564,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesFrenchItem2",
@@ -521,7 +577,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesFrenchItem3",
@@ -533,7 +590,8 @@
             "Hour": "15 Hour",
             "lecture": "15 Lecture",
             "personName": "Ghada Abdolnabi",
-            "bottomPrice": "1000 EGP"
+            "bottomPrice": "1000 EGP",
+            "gradeYear": "secondYearSecondary"
           }
         ]
       }
@@ -555,139 +613,219 @@
       "header": "We have + 500 professional teacher in our platform"
     },
     "allTeachers": {
-      "teachersHeader": "All Teachers",
+      "header": "All Teachers",
       "selectedLabel": "Select your studying year:",
-      "teachersOptions": [
-        "Second Year Secondary",
-        "Second Year Secondary",
-        "Second Year Secondary"
+      "options": [
+        {
+          "id": "teachersOption1",
+          "value": "All",
+          "text": "All"
+        },
+        {
+          "id": "teachersOption2",
+          "value": "firstGradeSecondary",
+          "text": "First grade secondary"
+        },
+        {
+          "id": "teachersOption3",
+          "value": "secondYearSecondary",
+          "text": "Second year secondary"
+        },
+        {
+          "id": "teachersOption4",
+          "value": "thirdGradeSecondary",
+          "text": "third grade secondary"
+        }
       ],
       "teachersItems": [
         {
           "id": "teachers1",
           "name": "Mohamed Ahmed",
           "career": "Arabic Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "firstGradeSecondary"
+          ]
         },
         {
           "id": "teachers2",
           "name": "Mohamed Ahmed",
           "career": "English Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "firstGradeSecondary"
+          ]
         },
         {
           "id": "teachers3",
           "name": "Ghada Ahmed",
           "career": "History Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "secondYearSecondary"
+          ]
         },
         {
           "id": "teachers4",
           "name": "Alyaa Ahmed",
           "career": "French Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "secondYearSecondary"
+          ]
         },
         {
           "id": "teachers5",
           "name": "Mohamed Ahmed",
           "career": "Chemistry Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers6",
           "name": "Fatma Ahmed",
           "career": "Physics Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers7",
           "name": "Mohamed Ahmed",
           "career": "Maths Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers8",
           "name": "Soha Mohamed",
           "career": "Science Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers9",
           "name": "Mohamed Ahmed",
           "career": "Arabic Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers10",
           "name": "Mohamed Ahmed",
           "career": "Arabic Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers11",
           "name": "Mohamed Ahmed",
           "career": "English Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers12",
           "name": "Ghada Ahmed",
           "career": "History Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers13",
           "name": "Alyaa Ahmed",
           "career": "French Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers14",
           "name": "Mohamed Ahmed",
           "career": "Chemistry Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers15",
           "name": "Fatma Ahmed",
           "career": "Physics Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers16",
           "name": "Mohamed Ahmed",
           "career": "Maths Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers17",
           "name": "Soha Mohamed",
           "career": "Science Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers18",
           "name": "Mohamed Ahmed",
           "career": "Arabic Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers19",
           "name": "Mohamed Ahmed",
           "career": "Maths Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers120",
           "name": "Soha Mohamed",
           "career": "Science Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers21",
           "name": "Mohamed Ahmed",
           "career": "Arabic Teacher",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         }
       ]
     }
@@ -735,5 +873,9 @@
       "fromBtn": "Send Message"
     }
   },
-  "notFound": {}
+  "notFound": {},
+  "errorMsg": {
+    "required": "Required",
+    "invalid": "Invalid email format"
+  }
 }

@@ -1,12 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-// import learning image
-import learningImg from "../../../../../../assets/images/learningImg.png";
-import learningImg1 from "../../../../../../assets/images/learning1.svg";
-import learningImg2 from "../../../../../../assets/images/learning2.svg";
 import CoButton from "./../../../../../common/CoButton";
 
-function Learning({ learning }) {
+function Learning({ learning, learningImgs }) {
   return (
     <section className="learning">
       <div className="container">
@@ -30,15 +26,15 @@ function Learning({ learning }) {
         </div>
         <div className="learning-right">
           <div className="learning-img-before">
-            <img className="learning-img" src={learningImg1} alt="" />
+            <img className="learning-img" src={learningImgs.learningImg1} alt="" />
           </div>
           <img
             className="learning-img"
-            src={learningImg}
+            src={learningImgs.learningImg}
             alt={learning.learningImgAlt}
           />
           <div className="learning-img-after">
-            <img className="learning-img" src={learningImg2} alt="" />
+            <img className="learning-img" src={learningImgs.learningImg2} alt="" />
           </div>
         </div>
       </div>
@@ -49,6 +45,7 @@ function Learning({ learning }) {
 const mapStateToProps = (state) => {
   return {
     learning: state.dataText.dataJson.home.learning,
+    learningImgs: state.allImages.pagesImgs.homeImgs.learningImgs,
   };
 };
 

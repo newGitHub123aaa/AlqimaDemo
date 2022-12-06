@@ -1,5 +1,5 @@
 {
-  "navLink": {
+  "navBar": {
     "lang": "en",
     "logoBox": {
       "logoSpan": "القمة"
@@ -135,7 +135,7 @@
     "footer": {
       "LinkHelp": "مساعدة",
       "LinkPrivacy": "الخصوصية",
-      "copyRight": "© 2022 القمة. كل الحقوق محفوظة."
+      "copyRight": "القمة. كل الحقوق محفوظة."
     }
   },
   "loginPage": {
@@ -206,10 +206,29 @@
       "searchBtn": "بحث"
     },
     "allCourses": {
-      "coursesHeader": "جميع الدورات",
+      "header": "جميع الدورات",
       "selectedLabel": "حدد عام دراستك:",
-      "coursesOptions": [
-        "السنة الثانية الثانوية"
+      "options": [
+        {
+          "id": "teachersOption1",
+          "value": "All",
+          "text": "الكل"
+        },
+        {
+          "id": "teachersOption2",
+          "value": "firstGradeSecondary",
+          "text": "الصف الأول الثانوي"
+        },
+        {
+          "id": "teachersOption3",
+          "value": "secondYearSecondary",
+          "text": "الصف الثاني ثانوي"
+        },
+        {
+          "id": "teachersOption4",
+          "value": "thirdGradeSecondary",
+          "text": "الصف الثالث الثانوي"
+        }
       ],
       "headerFilter": [
         "الكل",
@@ -225,9 +244,26 @@
       "coursesNumberTitle": "دورة",
       "sortedSelectedLabel": "مرتبة حسب:",
       "sortedCoursesOptions": [
-        "أعلى التقييمات",
-        "أعلى التقييمات",
-        "أعلى التقييمات"
+        {
+          "id": "sortedCoursesOptions1",
+          "value": "All",
+          "text": "الكل"
+        },
+        {
+          "id": "sortedCoursesOptions2",
+          "value": "5",
+          "text": "تقييم 5"
+        },
+        {
+          "id": "sortedCoursesOptions3",
+          "value": "4",
+          "text": "تقييم 4"
+        },
+        {
+          "id": "sortedCoursesOptions4",
+          "value": "3",
+          "text": "تقييم 3"
+        }
       ],
       "coursesItems": {
         "arabic": [
@@ -241,19 +277,21 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "firstGradeSecondary"
           },
           {
             "id": "coursesArabicItem2",
             "itemContentHeader": "عربي",
-            "rateNum": "4.5",
+            "rateNum": "4",
             "rateInfo": "(100)",
             "contentParagraph": "أفضل طريقة لحل مشاكلك",
             "participant": "1K مشارك",
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesArabicItem3",
@@ -265,7 +303,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "thirdGradeSecondary"
           }
         ],
         "english": [
@@ -279,7 +318,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesEnglishItem2",
@@ -291,7 +331,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesEnglishItem3",
@@ -303,7 +344,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "physics": [
@@ -317,7 +359,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesPhysicsItem2",
@@ -329,7 +372,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesPhysicsItem3",
@@ -341,7 +385,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "chemistry": [
@@ -355,7 +400,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesChemistryItem2",
@@ -367,7 +413,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesChemistryItem3",
@@ -379,7 +426,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "biology": [
@@ -393,7 +441,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesBiologyItem2",
@@ -405,7 +454,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesBiologyItem3",
@@ -417,7 +467,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "maths": [
@@ -431,7 +482,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesMathsItem2",
@@ -443,7 +495,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesMathsItem3",
@@ -455,7 +508,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "history": [
@@ -469,7 +523,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesHistoryItem2",
@@ -481,7 +536,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesHistoryItem3",
@@ -493,7 +549,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           }
         ],
         "french": [
@@ -507,7 +564,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesFrenchItem2",
@@ -519,7 +577,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           },
           {
             "id": "coursesFrenchItem3",
@@ -531,7 +590,8 @@
             "Hour": "15 ساعة",
             "lecture": "15 محاضرة",
             "personName": "غادة عبدالنبي",
-            "bottomPrice": "1000 ج"
+            "bottomPrice": "1000 ج",
+            "gradeYear": "secondYearSecondary"
           }
         ]
       }
@@ -553,139 +613,219 @@
       "header": "لدينا +500 مدرس محترف في منصتنا"
     },
     "allTeachers": {
-      "teachersHeader": "كل المعلمين",
+      "header": "كل المعلمين",
       "selectedLabel": "حدد عام دراستك:",
-      "teachersOptions": [
-        "السنة الثانية الثانوية",
-        "السنة الثانية الثانوية",
-        "السنة الثانية الثانوية"
+      "options": [
+        {
+          "id": "teachersOption1",
+          "value": "All",
+          "text": "الكل"
+        },
+        {
+          "id": "teachersOption2",
+          "value": "firstGradeSecondary",
+          "text": "الصف الأول الثانوي"
+        },
+        {
+          "id": "teachersOption3",
+          "value": "secondYearSecondary",
+          "text": "الصف الثاني الثانوي"
+        },
+        {
+          "id": "teachersOption4",
+          "value": "thirdGradeSecondary",
+          "text": "الصف الثالث الثانوي"
+        }
       ],
       "teachersItems": [
         {
           "id": "teachers1",
           "name": "محمد أحمد",
           "career": "مدرس لغة عربية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "firstGradeSecondary"
+          ]
         },
         {
           "id": "teachers2",
           "name": "محمد أحمد",
           "career": "معلم لغة انجليزية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "firstGradeSecondary"
+          ]
         },
         {
           "id": "teachers3",
           "name": "غادة أحمد",
           "career": "معلم تاريخ",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "secondYearSecondary"
+          ]
         },
         {
           "id": "teachers4",
           "name": "علياء أحمد",
           "career": "مدرس لغة فرنسية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "secondYearSecondary"
+          ]
         },
         {
           "id": "teachers5",
           "name": "محمد أحمد",
           "career": "مدرس كيمياء",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers6",
           "name": "فاطمة أحمد",
           "career": "مدرس الفيزياء",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers7",
           "name": "محمد أحمد",
           "career": "مدرس مادة الرياضيات",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers8",
           "name": "سهي محمد",
           "career": "معلم العلوم",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers9",
           "name": "محمد أحمد",
           "career": "مدرس لغة عربية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers10",
           "name": "محمد أحمد",
           "career": "مدرس لغة عربية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers11",
           "name": "محمد أحمد",
           "career": "معلم لغة انجليزية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers12",
           "name": "غادة أحمد",
           "career": "معلم تاريخ",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers13",
           "name": "علياء أحمد",
           "career": "مدرس لغة فرنسية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers14",
           "name": "محمد أحمد",
           "career": "مدرس كيمياء",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers15",
           "name": "فاطمة أحمد",
           "career": "مدرس الفيزياء",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers16",
           "name": "محمد أحمد",
           "career": "مدرس مادة الرياضيات",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers17",
           "name": "سهي محمد",
           "career": "معلم العلوم",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers18",
           "name": "محمد أحمد",
           "career": "مدرس لغة عربية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers19",
           "name": "محمد أحمد",
           "career": "مدرس مادة الرياضيات",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers20",
           "name": "سهي محمد",
           "career": "معلم العلوم",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         },
         {
           "id": "teachers21",
           "name": "محمد أحمد",
           "career": "مدرس لغة عربية",
-          "rate": "5.0"
+          "rate": "5.0",
+          "gradeYear": [
+            "thirdGradeSecondary"
+          ]
         }
       ]
     }
@@ -733,5 +873,9 @@
       "fromBtn": "أرسل رسالة"
     }
   },
-  "notFound": {}
+  "notFound": {},
+  "errorMsg": {
+    "required": "مطلوب",
+    "invalid": "تنسيق بريد إلكتروني غير صالح"
+  }
 }

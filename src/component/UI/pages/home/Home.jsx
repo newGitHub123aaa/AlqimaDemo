@@ -7,8 +7,10 @@ import Learning from "./sections/learning/Learning";
 import GetApp from "./sections/getApp/GetApp";
 import { connect } from "react-redux";
 import DocumentMeta from "react-document-meta";
-
-function Home(metaHome) {
+// import { useAuth } from "./../../../../auth/auth";
+function Home({ metaHome }) {
+  // const auth = useAuth();
+  // console.log(auth.dataAuth);
   return (
     <DocumentMeta {...metaHome}>
       <div className="home">

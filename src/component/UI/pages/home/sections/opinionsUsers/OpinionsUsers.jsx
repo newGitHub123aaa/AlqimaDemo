@@ -2,24 +2,18 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import OpinionsPerson from "./units/OpinionsPerson";
 
-// import OpinionsPerson images
-import opinionImg1 from "../../../../../../assets/images/opinions1.png";
-import opinionImg2 from "../../../../../../assets/images/opinions2.png";
-
-function OpinionsUsers({ opinionsUsers }) {
-  const [opinionsImgs, setOpinionsImgs] = useState([
-    opinionImg1,
-    opinionImg2,
-    opinionImg1,
-  ]);
-  const [activeNum, setActiveNum] = useState(0);
-
+function OpinionsUsers({ opinionsUsers, OpinionsUsersImgs, lang }) {
+  const [activeNum, setActiveNum] = useState(
+    0
+    // lang === "en"
+    //   ? 0
+    //   : lang === "ar"
+    //   ? Object.values(OpinionsUsersImgs).length
+    //   : 0
+  );
   useEffect(() => {
     let activeNumClone = activeNum;
-    let numInterval = setInterval(() => {
-      document.getElementsByTagName("html")[0].getAttribute("dir") === "rtl"
-        ? setOpinionsImgs(opinionsImgs.reverse())
-        : setOpinionsImgs(opinionsImgs);
+    let numIntervalOne = setInterval(() => {
       if (activeNumClone < opinionsUsers.opinionsPersons.length - 1) {
         activeNumClone++;
         setActiveNum(activeNumClone);
@@ -29,7 +23,7 @@ function OpinionsUsers({ opinionsUsers }) {
       }
     }, 2500);
     return () => {
-      clearInterval(numInterval);
+      clearInterval(numIntervalOne);
     };
   }, []);
 
@@ -50,7 +44,7 @@ function OpinionsUsers({ opinionsUsers }) {
               key={inx + el.id}
               className={activeNum === inx ? "active" : ""}
               quoteParagraph={el.quoteParagraph}
-              personImg={opinionsImgs[inx]}
+              personImg={OpinionsUsersImgs[`opinionImg${inx + 1}`]}
               personName={el.personName}
               personCareer={el.personCareer}
             />
@@ -72,6 +66,8 @@ function OpinionsUsers({ opinionsUsers }) {
 const mapStateToProps = (state) => {
   return {
     opinionsUsers: state.dataText.dataJson.home.opinionsUsers,
+    OpinionsUsersImgs: state.allImages.pagesImgs.homeImgs.OpinionsUsersImgs,
+    lang: state.langDir.lang,
   };
 };
 

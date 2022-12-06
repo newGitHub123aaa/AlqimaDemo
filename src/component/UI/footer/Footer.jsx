@@ -1,21 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-// import logoImg
-import logoImg from "../../../assets/images/logo/logo2.png";
-import AppStoreImg from "../../../assets/icons/App Store.svg";
-import GooglePlayImg from "../../../assets/icons/Google Play.svg";
-
-function Footer({ footer, navLink }) {
-  const [pagesPaths] = useState([
-    "home",
-    "teachers/all",
-    "courses/all",
-    "contactus",
-    "help",
-    "privacy",
-  ]);
+function Footer({ footer, navBar, footerImgs, footerPaths }) {
+  const theDate = new Date();
+  const year = theDate.getFullYear();
   return (
     <footer className="footer pattern">
       <div className="container">
@@ -23,37 +12,46 @@ function Footer({ footer, navLink }) {
           <div className="footer-top-left">
             <div className="logo-box">
               <div className="logo-img">
-                <img src={logoImg} alt="" />
+                <img src={footerImgs.logoImg2} alt="" />
               </div>
               <span className="span-logo span-logo-dark">
-                {navLink.logoBox.logoSpan}
+                {navBar.logoBox.logoSpan}
               </span>
             </div>
             <div className="get-app">
               <a href="#">
-                <img src={AppStoreImg} alt="App store img" />
+                <img src={footerImgs.AppStoreImg} alt="App store img" />
               </a>
               <a href="#">
-                <img src={GooglePlayImg} alt="Google play img" />
+                <img src={footerImgs.GooglePlayImg} alt="Google play img" />
               </a>
             </div>
           </div>
           <div className="footer-top-right">
             <div className="list-box">
               <ul className="list-ul">
-                {navLink.navList.map((el, inx) => (
+                {navBar.navList.map((el, inx) => (
                   <div key={inx + el}>
-                    <NavLink className="list-item" to={"/" + pagesPaths[inx]}>
+                    <NavLink
+                      className="list-item"
+                      to={Object.values(footerPaths)[inx]}
+                    >
                       <li className="list-item" key={inx}>
                         {el}
                       </li>
                     </NavLink>
                   </div>
                 ))}
-                <NavLink className="list-item" to={"/" + pagesPaths[4]}>
+                <NavLink
+                  className="list-item"
+                  to={Object.values(footerPaths)[4]}
+                >
                   <li>{footer.LinkHelp}</li>
                 </NavLink>
-                <NavLink className="list-item" to={"/" + pagesPaths[5]}>
+                <NavLink
+                  className="list-item"
+                  to={Object.values(footerPaths)[5]}
+                >
                   <li>{footer.LinkPrivacy}</li>
                 </NavLink>
               </ul>
@@ -61,7 +59,7 @@ function Footer({ footer, navLink }) {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-bottom-left">{footer.copyRight}</div>
+          <div className="footer-bottom-left">{'©' + year}{footer.copyRight}</div>
           <div className="footer-bottom-right">
             <a href="#">
               <i className="fab fa-facebook-f"></i>
@@ -88,7 +86,9 @@ function Footer({ footer, navLink }) {
 const mapStateToProps = (state) => {
   return {
     footer: state.dataText.dataJson.home.footer,
-    navLink: state.dataText.dataJson.navLink,
+    footerImgs: state.allImages.footerImgs,
+    navBar: state.dataText.dataJson.navBar,
+    footerPaths: state.allPaths.footerPaths,
   };
 };
 

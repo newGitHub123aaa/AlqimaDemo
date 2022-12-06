@@ -3,10 +3,12 @@ import AllSignUp from "./sections/AllSignUp";
 import { connect } from "react-redux";
 import DocumentMeta from "react-document-meta";
 
-function SignUp(metaSignUp) {
+function SignUp({ metaSignUp }) {
   return (
     <DocumentMeta {...metaSignUp}>
-      <AllSignUp />
+      <div >
+        <AllSignUp />
+      </div>
     </DocumentMeta>
   );
 }

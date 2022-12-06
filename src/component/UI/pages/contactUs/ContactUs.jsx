@@ -3,9 +3,9 @@ import ContactLanding from "./sections/contactLanding/ContactLanding";
 import ContactItems from "./sections/contactItems/ContactItems";
 import ContactForm from "./sections/contactForm/ContactForm";
 import { connect } from "react-redux";
-import DocumentMeta from 'react-document-meta';
+import DocumentMeta from "react-document-meta";
 
-function ContactUs(metaContactUs) {
+function ContactUs({ metaContactUs }) {
   return (
     <DocumentMeta {...metaContactUs}>
       <div className="contact-page">
@@ -18,7 +18,7 @@ function ContactUs(metaContactUs) {
 }
 const mapStateToProps = (state) => {
   return {
-    metaContactUs: state.dataText.dataJson.coursesPage.meta,
+    metaContactUs: state.dataText.dataJson.contactsPage.meta,
   };
 };
 

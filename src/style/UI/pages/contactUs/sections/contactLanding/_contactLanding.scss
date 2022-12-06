@@ -6,7 +6,11 @@ section.contactsLanding {
   position: relative;
   z-index: 1;
   min-height: 1054px;
-  background-image: linear-gradient(to bottom, v.$main-section-color 760px, #fff 760px);
+  background-image: linear-gradient(
+    to bottom,
+    v.$main-section-color 760px,
+    #fff 760px
+  );
   div.container {
     display: flex;
     flex-direction: column;
@@ -141,8 +145,8 @@ section.contactsLanding {
         background-color: v.$landing-bullet-five;
         bottom: -11px;
         @media (max-width: 767.98px) {
-          bottom: 15%;
-          left: 74px;
+          bottom: 56px;
+          left: 48px;
         }
         @media (min-width: 767.98px) and (max-width: 991.98px) {
           bottom: -69px;
@@ -176,7 +180,7 @@ section.contactsLanding {
         bottom: 35px;
         left: 325px;
         @media (max-width: 767.98px) {
-          bottom: 167px;
+          bottom: 131px;
           right: 47px;
         }
 

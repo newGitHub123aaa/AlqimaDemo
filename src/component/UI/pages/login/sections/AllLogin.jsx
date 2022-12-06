@@ -1,50 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
+import TextError from "./../../../../common/TextError";
+import { logOut, signInUser } from "./../../../../../redux/features/dataAuth/dataAuthSlice";
 
-// import  images
-import logoImg from "../../../../../assets/images/logo/logo2.png";
-import leftImg from "../../../../../assets/images/leftSignPage.png";
-import { useNavigate } from "react-router-dom";
-
-function AllLogin({ loginPage }) {
+function AllLogin({ loginPage, loginImgs, errorMsg, signInUser, logOut }) {
   const navigate = useNavigate();
-  // state
-  const [form, setForm] = useState({
+  const location = useLocation();
+  const redirectPath = location.state?.path || "/";
+  const initialValues = {
     email: "",
     password: "",
     checkbox: false,
-    validate: false,
-    errorMassages: {
-      email: "",
-      password: "",
-      checkbox: "",
-    },
+  };
+  const validationSchema = Yup.object({
+    email: Yup.string().email(errorMsg.invalid).required(errorMsg.required),
+    password: Yup.string().required(errorMsg.required),
+    checkbox: Yup.boolean(),
   });
-  // methods
-  const handleChange = (e) => {
-    //   clone
-    let formClone = { ...form };
-    //   edit
-    formClone[e.currentTarget.name] = e.currentTarget.value.trim();
-    // form validate;
-    if (formClone.email.trim() !== "") {
-      formClone.errorMassages.email = "";
-      formClone.validate = true;
-      // setState
-      setForm(formClone);
-    } else {
-      formClone.errorMassages.email = "! fill in the email field";
-      formClone.validate = false;
-      // setState
-      setForm(formClone);
+  const onSubmit = async (values, submitProps) => {
+    // console.log(values);
+    // console.log(submitProps);
+    await signInUser(values);
+    if (localStorage.getItem("token")) {
+      navigate(redirectPath, { replace: true });
     }
+
+    submitProps.setSubmitting(false);
+    submitProps.resetForm();
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // console.log(e);
-  };
-  const handleGoSignUp = () => {
-    navigate(`/signup`);
+  const handleGoLink = (path) => {
+    navigate(`/${path}`);
   };
   return (
     <section className="login">
@@ -53,71 +41,88 @@ function AllLogin({ loginPage }) {
           <div className="sign-left">
             <div className="sign-left-top">
               <div className="hand-img">
-                <img src={logoImg} alt="" />
+                <img src={loginImgs.logoImg2} alt="" />
               </div>
               <h2 className="sign-header">{loginPage.loginSignHeader}</h2>
               <p className="sign-paragraph">{loginPage.loginSignParagraph}</p>
             </div>
             <div className="sign-form">
-              <form onSubmit={handleSubmit}>
-                <div className="sign-box sign-email">
-                  <label htmlFor="login-email">
-                    {loginPage.loginEmailLabel}
-                  </label>
-                  <input
-                    type="email"
-                    id="login-email"
-                    name="email"
-                    placeholder={loginPage.loginEmailPlaceholder}
-                    value={form.email}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="sign-box sign-password">
-                  <label htmlFor="login-password">
-                    {loginPage.loginPasswordLabel}
-                  </label>
-                  <input
-                    type="password"
-                    id="login-password"
-                    name="password"
-                    placeholder={loginPage.loginPasswordPlaceholder}
-                    value={form.password}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="text-remember">
-                  <div className="checkbox-box">
-                    <input
-                      type="checkbox"
-                      id="login-checkbox"
-                      name="checkbox"
-                      value={form.checkbox}
-                      onChange={handleChange}
-                    />
-                    <label htmlFor="login-checkbox">
-                      {loginPage.loginRememberMe}
-                    </label>
-                  </div>
-                  <span className="odd-words">
-                    {loginPage.loginForgetPassword}
-                  </span>
-                </div>
-                <button className="sign-btn">{loginPage.loginLoginBtn}</button>
-                <p className="bottom-paragraph">
-                  {loginPage.loginBottomParagraph}&thinsp;
-                  <button className="button-go-login" onClick={handleGoSignUp}>
-                    <span className="bottom-span">
-                      {loginPage.loginBottomSpan}
-                    </span>
-                  </button>
-                </p>
-              </form>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={onSubmit}
+              >
+                {(formik) => {
+                  return (
+                    <Form>
+                      <div className="sign-box sign-email">
+                        <label htmlFor="login-email">
+                          {loginPage.loginEmailLabel}
+                        </label>
+                        <Field
+                          type="email"
+                          id="login-email"
+                          name="email"
+                          placeholder={loginPage.loginEmailPlaceholder}
+                        />
+                        <ErrorMessage name="email" component={TextError} />
+                      </div>
+                      <div className="sign-box sign-password">
+                        <label htmlFor="login-password">
+                          {loginPage.loginPasswordLabel}
+                        </label>
+                        <Field
+                          type="password"
+                          id="login-password"
+                          name="password"
+                          placeholder={loginPage.loginPasswordPlaceholder}
+                        />
+                        <ErrorMessage name="password" component={TextError} />
+                      </div>
+                      <div className="text-remember">
+                        <div className="checkbox-box">
+                          <Field
+                            type="checkbox"
+                            id="login-checkbox"
+                            name="checkbox"
+                          />
+                          <label htmlFor="login-checkbox">
+                            {loginPage.loginRememberMe}
+                          </label>
+                        </div>
+                        <button
+                          type="button"
+                          className="odd-words"
+                          onClick={() => handleGoLink("forgetpassword")}
+                          // onClick={() => logOut()}
+                        >
+                          {loginPage.loginForgetPassword}
+                        </button>
+                      </div>
+                      <button type="submit" className="sign-btn">
+                        {loginPage.loginLoginBtn}
+                      </button>
+                      <p className="bottom-paragraph">
+                        {loginPage.loginBottomParagraph}&thinsp;
+                        <button
+                          type="button"
+                          className="button-go-login"
+                          onClick={() => handleGoLink("signup")}
+                        >
+                          <span className="bottom-span">
+                            {loginPage.loginBottomSpan}
+                          </span>
+                        </button>
+                      </p>
+                    </Form>
+                  );
+                }}
+              </Formik>
             </div>
           </div>
         </div>
         <div className="sign-right">
-          <img src={leftImg} alt="" />
+          <img src={loginImgs.leftImg} alt="" />
         </div>
       </div>
     </section>
@@ -127,7 +132,14 @@ function AllLogin({ loginPage }) {
 const mapStateToProps = (state) => {
   return {
     loginPage: state.dataText.dataJson.loginPage,
+    loginImgs: state.allImages.pagesImgs.loginImgs,
+    errorMsg: state.dataText.dataJson.errorMsg,
   };
 };
-
-export default connect(mapStateToProps)(AllLogin);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signInUser: (formData) => dispatch(signInUser(formData)),
+    // logOut: () => dispatch(logOut()),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(AllLogin);

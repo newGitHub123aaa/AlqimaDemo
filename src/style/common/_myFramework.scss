@@ -67,3 +67,7 @@ button.change-lang {
   background-image: url("../../assets/pattern/Pattern1.svg");
   box-shadow: 0 0 10px 15px v.$sec-back-sections inset;
 }
+
+.form-error-msg {
+  color: red;
+}

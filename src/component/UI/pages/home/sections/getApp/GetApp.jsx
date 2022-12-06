@@ -1,16 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 
-// import learning image
-import AppImg1 from "../../../../../../assets/images/appImg1.png";
-import AppImg2 from "../../../../../../assets/images/appImg2.png";
-// import store App and google play app images
-import AppStoreImg from "../../../../../../assets/icons/App Store.svg";
-import GooglePlayImg from "../../../../../../assets/icons/Google Play.svg";
 import WaveTop from "./../../../../../common/WaveTop";
 import WaveBottom from "../../../../../common/WaveBottom";
 
-function GetApp({ getApp }) {
+function GetApp({ getApp, getAppImgs }) {
   return (
     <section className="get-app">
       <WaveTop />
@@ -19,13 +13,13 @@ function GetApp({ getApp }) {
           <div className="image-hand-one">
             <img
               className="getApp-img"
-              src={AppImg2}
+              src={getAppImgs.AppImg2}
               alt={getApp.getAppImgAlt2}
             />
             <div className="image-hand-two">
               <img
                 className="getApp-img"
-                src={AppImg1}
+                src={getAppImgs.AppImg1}
                 alt={getApp.getAppImgAlt1}
               />
             </div>
@@ -36,10 +30,10 @@ function GetApp({ getApp }) {
           <p className="getApp-paragraph">{getApp.getAppParagraph}</p>
           <div className="get-app">
             <a href="#">
-              <img src={AppStoreImg} alt={getApp.downloadAppAlt1} />
+              <img src={getAppImgs.AppStoreImg} alt={getApp.downloadAppAlt1} />
             </a>
             <a href="#">
-              <img src={GooglePlayImg} alt={getApp.downloadAppAlt12} />
+              <img src={getAppImgs.GooglePlayImg} alt={getApp.downloadAppAlt12} />
             </a>
           </div>
         </div>
@@ -51,6 +45,7 @@ function GetApp({ getApp }) {
 const mapStateToProps = (state) => {
   return {
     getApp: state.dataText.dataJson.home.getApp,
+    getAppImgs: state.allImages.pagesImgs.homeImgs.getAppImgs,
   };
 };
 
