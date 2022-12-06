@@ -66,10 +66,10 @@ import AppImg2 from "./../../../assets/images/appImg2.png";
 //---- AppStoreImg imported before in footerImgs
 //---- GooglePlayImg imported before in footerImgs
 // import landing images
-import landingImg1 from "./../../../assets/images/HomeLandingImages/landing1.png";
-import landingImg2 from "./../../../assets/images/HomeLandingImages/landing2.png";
-import landingImg3 from "./../../../assets/images/HomeLandingImages/landing3.png";
-import landingImg4 from "./../../../assets/images/HomeLandingImages/landing4.png";
+import landingImg1 from "./../../../assets/images/landing1.png";
+import landingImg2 from "./../../../assets/images/landing2.png";
+import landingImg3 from "./../../../assets/images/landing3.png";
+import landingImg4 from "./../../../assets/images/landing4.png";
 //-- import learning image
 import learningImg from "./../../../assets/images/learningImg.png";
 import learningImg1 from "./../../../assets/images/learning1.svg";
