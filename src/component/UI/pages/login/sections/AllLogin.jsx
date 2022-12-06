@@ -4,7 +4,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import TextError from "./../../../../common/TextError";
-import { logOut, signInUser } from "./../../../../../redux/features/dataAuth/dataAuthSlice";
+import {
+  logOut,
+  signInUser,
+} from "./../../../../../redux/features/dataAuth/dataAuthSlice";
 
 function AllLogin({ loginPage, loginImgs, errorMsg, signInUser, logOut }) {
   const navigate = useNavigate();
@@ -36,93 +39,95 @@ function AllLogin({ loginPage, loginImgs, errorMsg, signInUser, logOut }) {
   };
   return (
     <section className="login">
-      <div className="sign">
-        <div className="sign-left-container">
-          <div className="sign-left">
-            <div className="sign-left-top">
-              <div className="hand-img">
-                <img src={loginImgs.logoImg2} alt="" />
+      <div className="container-wrapped">
+        <div className="sign">
+          <div className="sign-left-container">
+            <div className="sign-left">
+              <div className="sign-left-top">
+                <div className="hand-img">
+                  <img src={loginImgs.logoImg2} alt="" />
+                </div>
+                <h2 className="sign-header">{loginPage.loginSignHeader}</h2>
+                <p className="sign-paragraph">{loginPage.loginSignParagraph}</p>
               </div>
-              <h2 className="sign-header">{loginPage.loginSignHeader}</h2>
-              <p className="sign-paragraph">{loginPage.loginSignParagraph}</p>
-            </div>
-            <div className="sign-form">
-              <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={onSubmit}
-              >
-                {(formik) => {
-                  return (
-                    <Form>
-                      <div className="sign-box sign-email">
-                        <label htmlFor="login-email">
-                          {loginPage.loginEmailLabel}
-                        </label>
-                        <Field
-                          type="email"
-                          id="login-email"
-                          name="email"
-                          placeholder={loginPage.loginEmailPlaceholder}
-                        />
-                        <ErrorMessage name="email" component={TextError} />
-                      </div>
-                      <div className="sign-box sign-password">
-                        <label htmlFor="login-password">
-                          {loginPage.loginPasswordLabel}
-                        </label>
-                        <Field
-                          type="password"
-                          id="login-password"
-                          name="password"
-                          placeholder={loginPage.loginPasswordPlaceholder}
-                        />
-                        <ErrorMessage name="password" component={TextError} />
-                      </div>
-                      <div className="text-remember">
-                        <div className="checkbox-box">
-                          <Field
-                            type="checkbox"
-                            id="login-checkbox"
-                            name="checkbox"
-                          />
-                          <label htmlFor="login-checkbox">
-                            {loginPage.loginRememberMe}
+              <div className="sign-form">
+                <Formik
+                  initialValues={initialValues}
+                  validationSchema={validationSchema}
+                  onSubmit={onSubmit}
+                >
+                  {(formik) => {
+                    return (
+                      <Form>
+                        <div className="sign-box sign-email">
+                          <label htmlFor="login-email">
+                            {loginPage.loginEmailLabel}
                           </label>
+                          <Field
+                            type="email"
+                            id="login-email"
+                            name="email"
+                            placeholder={loginPage.loginEmailPlaceholder}
+                          />
+                          <ErrorMessage name="email" component={TextError} />
                         </div>
-                        <button
-                          type="button"
-                          className="odd-words"
-                          onClick={() => handleGoLink("forgetpassword")}
-                          // onClick={() => logOut()}
-                        >
-                          {loginPage.loginForgetPassword}
+                        <div className="sign-box sign-password">
+                          <label htmlFor="login-password">
+                            {loginPage.loginPasswordLabel}
+                          </label>
+                          <Field
+                            type="password"
+                            id="login-password"
+                            name="password"
+                            placeholder={loginPage.loginPasswordPlaceholder}
+                          />
+                          <ErrorMessage name="password" component={TextError} />
+                        </div>
+                        <div className="text-remember">
+                          <div className="checkbox-box">
+                            <Field
+                              type="checkbox"
+                              id="login-checkbox"
+                              name="checkbox"
+                            />
+                            <label htmlFor="login-checkbox">
+                              {loginPage.loginRememberMe}
+                            </label>
+                          </div>
+                          <button
+                            type="button"
+                            className="odd-words"
+                            onClick={() => handleGoLink("forgetpassword")}
+                            // onClick={() => logOut()}
+                          >
+                            {loginPage.loginForgetPassword}
+                          </button>
+                        </div>
+                        <button type="submit" className="sign-btn">
+                          {loginPage.loginLoginBtn}
                         </button>
-                      </div>
-                      <button type="submit" className="sign-btn">
-                        {loginPage.loginLoginBtn}
-                      </button>
-                      <p className="bottom-paragraph">
-                        {loginPage.loginBottomParagraph}&thinsp;
-                        <button
-                          type="button"
-                          className="button-go-login"
-                          onClick={() => handleGoLink("signup")}
-                        >
-                          <span className="bottom-span">
-                            {loginPage.loginBottomSpan}
-                          </span>
-                        </button>
-                      </p>
-                    </Form>
-                  );
-                }}
-              </Formik>
+                        <p className="bottom-paragraph">
+                          {loginPage.loginBottomParagraph}&thinsp;
+                          <button
+                            type="button"
+                            className="button-go-login"
+                            onClick={() => handleGoLink("signup")}
+                          >
+                            <span className="bottom-span">
+                              {loginPage.loginBottomSpan}
+                            </span>
+                          </button>
+                        </p>
+                      </Form>
+                    );
+                  }}
+                </Formik>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="sign-right">
-          <img src={loginImgs.leftImg} alt="" />
+          <div className="sign-right">
+            <img src={loginImgs.leftImg} alt="" />
+          </div>
         </div>
       </div>
     </section>
