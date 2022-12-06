@@ -65,7 +65,7 @@ const LazySignUp = lazy(() => {
 
 const LazyNotFound = lazy(() => {
   return Promise.all([
-    import("./../component/UI/pages/notFound/NotFound"),
+    import("../component/UI/pages/notfound/Notfound"),
     new Promise((resolve) => setTimeout(resolve, 0)),
   ]).then(([moduleExports]) => {
     document.body.style.overflow = "auto";
@@ -85,12 +85,7 @@ function Router() {
         }
       /> */}
 
-      <Route
-        path="home"
-        element={
-            <Home />
-        }
-      />
+      <Route path="home" element={<Home />} />
 
       <Route path="/" element={<Navigate to="/Home" />} />
       <Route
