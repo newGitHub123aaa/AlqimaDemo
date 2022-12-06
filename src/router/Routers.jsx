@@ -65,7 +65,7 @@ const LazySignUp = lazy(() => {
 
 const LazyNotFound = lazy(() => {
   return Promise.all([
-    import("./../component/UI/pages/notFound/NotFound"),
+    import("./../component/UI/pages/notfound/NotFound"),
     new Promise((resolve) => setTimeout(resolve, 0)),
   ]).then(([moduleExports]) => {
     document.body.style.overflow = "auto";
