@@ -10,7 +10,7 @@ footer.footer {
     div.footer-top {
       display: flex;
       flex-direction: column;
-      align-items:flex-start;
+      align-items: flex-start;
       @media (max-width: 991.98px) {
         flex-direction: column;
         align-items: center;
@@ -21,22 +21,27 @@ footer.footer {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        @media (max-width: 991.98px){
-        	flex-direction: column;
+        @media (max-width: 991.98px) {
+          flex-direction: column;
           align-items: center;
         }
         .get-app {
           max-width: 480px;
           display: flex;
           flex-direction: column;
-          gap:20px;
-          @media (max-width: 991.98px){
+          gap: 20px;
+          @media (max-width: 991.98px) {
             flex-direction: row;
           }
-          img {
+          a.get-app-img {
             display: block;
-            // width: 150px;
-            // height: 51px;
+            border-radius: 6px;
+            overflow: hidden;
+            img {
+              display: block;
+              // width: 150px;
+              // height: 51px;
+            }
           }
         }
       }
@@ -44,7 +49,7 @@ footer.footer {
       div.footer-top-right {
         flex-grow: 1;
         text-align: start;
-        @media (max-width: 767.98px){
+        @media (max-width: 767.98px) {
           align-self: flex-start;
           width: 100%;
         }

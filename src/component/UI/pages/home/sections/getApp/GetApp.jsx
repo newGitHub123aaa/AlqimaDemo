@@ -29,11 +29,14 @@ function GetApp({ getApp, getAppImgs }) {
           <h2 className="learn-header">{getApp.learnHeader}</h2>
           <p className="getApp-paragraph">{getApp.getAppParagraph}</p>
           <div className="get-app">
-            <a href="#">
+            <a href="#" className="get-app-img">
               <img src={getAppImgs.AppStoreImg} alt={getApp.downloadAppAlt1} />
             </a>
-            <a href="#">
-              <img src={getAppImgs.GooglePlayImg} alt={getApp.downloadAppAlt12} />
+            <a href="#" className="get-app-img">
+              <img
+                src={getAppImgs.GooglePlayImg}
+                alt={getApp.downloadAppAlt12}
+              />
             </a>
           </div>
         </div>

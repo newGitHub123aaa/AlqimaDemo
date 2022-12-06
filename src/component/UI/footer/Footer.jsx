@@ -19,10 +19,10 @@ function Footer({ footer, navBar, footerImgs, footerPaths }) {
               </span>
             </div>
             <div className="get-app">
-              <a href="#">
+              <a href="#" className="get-app-img">
                 <img src={footerImgs.AppStoreImg} alt="App store img" />
               </a>
-              <a href="#">
+              <a href="#" className="get-app-img">
                 <img src={footerImgs.GooglePlayImg} alt="Google play img" />
               </a>
             </div>
@@ -59,7 +59,10 @@ function Footer({ footer, navBar, footerImgs, footerPaths }) {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-bottom-left">{'©' + year}{footer.copyRight}</div>
+          <div className="footer-bottom-left">
+            {"©" + year}
+            {footer.copyRight}
+          </div>
           <div className="footer-bottom-right">
             <a href="#">
               <i className="fab fa-facebook-f"></i>

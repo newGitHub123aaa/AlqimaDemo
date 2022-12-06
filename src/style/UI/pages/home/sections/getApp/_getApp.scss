@@ -34,9 +34,7 @@ section.get-app {
           margin: auto;
           transform: translateX(-113px);
         }
-        @at-root html[dir="rtl"]
-            section.get-app
-            div.getApp-left {
+        @at-root html[dir="rtl"] section.get-app div.getApp-left {
           @media (min-width: 768px) and (max-width: 991px) {
             transform: translateX(187px) !important;
           }
@@ -153,10 +151,15 @@ section.get-app {
         @media (max-width: 767.98px) {
           margin-top: 20px;
         }
-        img {
+        a.get-app-img {
           display: block;
-          @media (max-width: 767.98px) {
-            width: 145px;
+          border-radius: 6px;
+          overflow: hidden;
+          img {
+            display: block;
+            @media (max-width: 767.98px) {
+              width: 145px;
+            }
           }
         }
       }
